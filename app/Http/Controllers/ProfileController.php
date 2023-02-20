@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ProfileUpdateRequest;
-use Illuminate\Http\RedirectResponse;
+use App\Models\User;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\View\View;
+use App\Http\Requests\ProfileUpdateRequest;
 
 class ProfileController extends Controller
 {
@@ -36,6 +37,21 @@ class ProfileController extends Controller
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
+
+    public function update_image(Request $request)
+    {
+        $id = $request->user()->id;
+
+        $image = $request->file('image')->getClientOriginalName();
+        $request->file('image')->storeAs('public/image', $image);
+
+        User::where('id' , $id)->update([
+            'image'=>$image,
+        ]);
+        return redirect('/profile');
+    }
+
+
 
     /**
      * Delete the user's account.

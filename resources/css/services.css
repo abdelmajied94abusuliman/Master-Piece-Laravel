@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka+One&family=Open+Sans&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+}
+
+
+
+
+.up {
+    position: fixed;
+    bottom: 100px;
+    right: -70px;
+    background-color: rgb(197, 145, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    font-family: Arial,Tahoma;
+    cursor: pointer;
+}
+
+.up img{
+    width: 100px;
+    height: 70px;
+}
+
+.up.show {
+    right: 35px;
+}
+
+
+
+
+#container-filter-apartment {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25rem;
+}
+
+#container-icon-and-search {
+    text-align: center;
+    align-items: center;
+    margin-left: 5.0rem;
+}
+
+#container-filter-apartment select {
+    background-color: #F0ECEC;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.div-bar {
+    display: inline-block;
+}
+
+#typeOfService {
+    height: 4.9vh;
+    width: 6.25rem;
+    align-items: center;
+    /* padding-bottom: 2.5px; */
+    margin-left: 35px;
+}
+
+#search-bar{
+    border: 2px solid rgb(192, 192, 192);
+    border-left: none;
+    height: 4.9vh;
+    width: 30vw ;
+    /* padding-bottom: 1.5px; */
+}
+
+input:focus{
+    outline: none;
+}
+
+#container-for-select-filter {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 35px;
+
+}
+
+#container-for-select-filter select {
+    margin-left: 1.25rem;
+    width: 9.7rem;
+}
+
+#filter {
+    margin-right: 11.5%;
+    width: 5.3rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: rgb(233, 171, 0);
+    border: 1px solid #000080;
+    cursor: pointer;
+}
+
+#filter:hover {
+    background-color: rgb(171, 126, 0);
+}
+
+#furnished {
+    margin-right: 3.0rem;
+}
+
+#container-apartmnet-and-location {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+#container-apartment-pic-and-description {
+    display: flex;
+    justify-content: center;
+}
+
+#container-details-of-apartment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+
+#container-icons-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.apartment-img {
+    width: 18rem;
+    height: 18rem;
+    margin-right: 1.25rem;
+}
+
+.apartment-location {
+    width: 35rem;
+    height: 18rem;
+    /* margin-right: 1.5rem; */
+}
+

@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+  }
+  
+section{
+    background-color:  #F2F0EF;
+    height: 150vh;
+    padding: 100px 150px;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka+One&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+}
+
+.up {
+    position: fixed;
+    bottom: 100px;
+    right: -70px;
+    background-color: rgb(197, 145, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    font-family: Arial,Tahoma;
+    cursor: pointer;
+}
+
+.up img{
+    width: 100px;
+    height: 70px;
+}
+
+.up.show {
+    right: 35px;
+}
+
+
+
+
+
+
+
+
+
+section{
+    padding-top: 100px;
+}
+
+.container {
+    background-color: white;
+    height: 100%;
+}
+
+.container p,label {
+    color: #000080;
+}
+
+.container label {
+    font-weight: bold; 
+}
+
+.container h2 {
+    color: #000080;
+    font-size: 2.5em;
+    font-weight: 700;
+    padding-left: 40px;
+    padding-top: 30px;
+ 
+}
+
+.container a {
+   text-decoration: none;
+ 
+}
+
+.container a:hover {
+   color: #c4c700;
+ 
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 50px;
+    gap: 6px;  
+}
+
+.container form input[type=email],input[type=password] {
+    width: 30%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+.container form button{
+    width: 18rem; 
+    height: 3rem;
+    padding: 12px;
+    background-color: silver;
+    color: black;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.5s ease;
+}
+
+#not-have-account {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#go-with-link {
+    color:rgb(197, 145, 0);
+}
+
+#go-with-link:hover {
+    text-decoration: underline;
+    color: #000080;
+}
+
+#upDiv {
+    /* background-color: red; */
+    padding-bottom: 2rem;
+}
+
+#container-of-image-and-information {
+    margin-left:20%;
+    display: flex;
+    gap: 15%;
+}
+
+#profile-pic {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+}
+
+#edit-btn{
+    width: 18rem;
+    height: 3rem;
+    background-color: #000080;
+    color: aliceblue;
+    text-align: center;
+    border: none;
+    font-size: 0.9rem;
+}
+
+#update-btn {
+    width: 18rem; 
+    height: 3rem;
+}
+
+#fname, #lname, #mobile, #pass {
+    width: 11.8rem; 
+    height: 1.5rem;
+}
+
+form label {
+    margin-right: 1rem;
+}
+
+#nameOfUser{
+    margin-left: 15%;
+}
+
+#containerOfCoupon {
+    display: flex;
+    justify-content: space-around;
+    background-color: #d3d3d3;
+    border: 5px inset #9a9a9a;
+    padding-top: 3rem;
+    padding-bottom: 2.5rem;
+    filter: blur(2px);
+}
+
+#ownerPart {
+    width: 5rem; 
+    height: 2rem;
+    font-size: 1.25rem;
+}
+
+#generateQR {
+    height: 3rem;
+    padding: 12px;
+    background-color: silver;
+    color: black;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.5s ease;
+    width : 24.5rem;
+}
+
+#QRCode{
+    width: 15rem;
+    height: 15rem;
+    display: none;
+}
+
+#callToActionProfile {
+    margin-top: 3rem;
+    width: 18rem;
+    height: 3rem;
+    background-color: #000080;
+    color: aliceblue;
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+.bubble {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    width: 35rem;
+    background: rgb(160, 198, 199);
+    border-radius: 40px;
+    padding: 30px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+}
+
+.bubble-bottom-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 24px solid rgb(160, 198, 199);
+    border-right: 12px solid transparent;
+    border-top: 12px solid rgb(160, 198, 199);
+    border-bottom: 20px solid transparent;
+    left: 32px;
+    bottom: -24px;
+  }

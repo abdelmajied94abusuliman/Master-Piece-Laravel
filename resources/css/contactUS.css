@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka+One&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+}
+
+.contact_bg {
+    height: 90vh;
+    background: url('../../public/image/image\(5\).png');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: left;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.contact_bg h1 {
+    font-size: 4.3rem;
+
+}
+
+.line div{
+    margin: 0 0.4rem;
+}
+
+.line div:nth-child(1),
+.line div:nth-child(3) {
+    height: 4px;
+    width: 70px;
+    background: #807700;
+    border-radius: 5px;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+
+}
+
+.line div:nth-child(2) {
+    width: 10px;
+    height: 10px;
+    background: #807700;
+    border-radius: 50%;
+}
+
+.text {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.contact_bg .text {
+    margin: 1.6rem 0;
+}
+
+.contact_body {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.contact_body h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #000080;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.contact_body .line {
+    justify-content: center;
+}
+
+.contact_info {
+    margin: 2rem 0;
+    text-align: center;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+}
+.contact_info span {
+ display: block;
+}
+
+.contact_info div {
+    margin: 0.8rem 0;
+    padding: 1rem;
+}
+.contact_info span i {
+    font-size: 2rem;
+    padding-bottom: 0.9rem;
+    color: #000080;
+}
+.contact_info div span:nth-child(3) {
+    margin: 0.7rem 0;
+}
+
+.contact_info div span:nth-child(2) {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.contact_info text {
+    padding-top: 0.4rem;
+}
+
+.contact_form {
+    padding: 2rem 0;
+    border-top: 1px solid #c1c1c1;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+}
+.contact_form form {
+    padding-bottom: 1rem;
+}
+.form_control {
+    width: 100%;
+    border : 1.5px solid #c7c7c7;
+    border-radius: 5px;
+    padding: 0.7rem;
+    margin: 1.3rem 0;
+    font-size: 1rem;
+    outline: 0;
+}
+.form_control:focus {
+    box-shadow: 0 0 9px -3px #000080;
+}
+
+.send_btn {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: rgb(52, 60, 67);
+    background-color: rgb(225, 192, 102);
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.send_btn:hover {
+    background-color: #000080;
+    color: #ffffff;
+}
+.contact_form div img {
+    margin-top: 15px;
+    width:90%;
+    height: 65vh;
+}
+.contact_form div {
+    margin: 0 auto;
+    text-align: right;
+}
+
+.map {
+    width: 95%;
+    height: 60vh;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+
+
+
+/*                  SCROLL UP                           */
+/*                  SCROLL UP                           */
+/*                  SCROLL UP                           */
+/*                  SCROLL UP                           */
+
+
+
+
+.up {
+    position: fixed;
+    bottom: 100px;
+    right: -70px;
+    background-color: rgb(197, 145, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    font-family: Arial,Tahoma;
+    cursor: pointer;
+}
+
+.up img{
+    width: 100px;
+    height: 70px;
+}
+
+.up.show {
+    right: 35px;
+}

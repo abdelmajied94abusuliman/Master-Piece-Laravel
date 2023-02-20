@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+section{
+    background-color:  #F2F0EF;
+    height: 90vh;
+    padding: 100px 150px;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka+One&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+}
+
+.flex-login {
+    display: flex;
+    padding: 6vw;
+    justify-content: space-around;
+}
+
+.adminForm {
+    padding-top: 1px !important;
+}
+
+.adminInput {
+    width: 30vw !important;
+}
+
+
+
+
+section{
+    padding-top: 100px;
+}
+
+.container {
+    background-color: white;
+    height: 100%;
+}
+
+.container p,label {
+    color: #000080;
+}
+
+.container label {
+    font-weight: bold;
+}
+
+.container h2 {
+    color: #000080;
+    font-size: 2.5em;
+    font-weight: 700;
+    padding-left: 40px;
+    padding-top: 30px;
+
+}
+
+.container a {
+   text-decoration: none;
+
+}
+
+.container a:hover {
+   color: #c4c700;
+
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 50px;
+    gap: 6px;
+}
+
+.container form input[type=email],input[type=password] {
+    width: 30%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+.container form button{
+    width: 30%;
+    padding: 12px;
+    background-color: #000080;
+    color: white;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.5s ease;
+
+}
+
+.container form button:hover{
+    background-color: #c4c700;
+    transform: scale(1.1);
+}
+
+#not-have-account {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#go-with-link {
+    color:rgb(197, 145, 0);
+}
+
+#go-with-link:hover {
+    text-decoration: underline;
+    color: #000080;
+}

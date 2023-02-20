@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+section{
+    background-color:  #F2F0EF;
+    padding: 100px 150px;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka+One&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+}
+
+
+section{
+    padding-top: 100px;
+
+}
+
+.container {
+    background-color: white;
+    height: 55vh;
+}
+
+.container p,label {
+    color: #000080;
+}
+
+.container label {
+    font-weight: bold;
+}
+
+.container h2 {
+    color: #000080;
+    font-size: 2.5em;
+    font-weight: 700;
+    padding-left: 40px;
+    padding-top: 30px;
+
+}
+
+.container a {
+   text-decoration: none;
+
+}
+
+.container a:hover {
+   color: #c4c700;
+
+}
+
+.container form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+    padding-left: 80px;
+    padding-right: 40px;
+}
+
+#table-form {
+    width: 90%;
+}
+
+
+.container form input[type=text], input[type=number] ,input[type=email],input[type=password],[name=fname],input[name=lname],input[name=mobile] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+#button-register{
+    width: 15vw;
+    height: 50px;
+    background-color: #000080;
+    color: white;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+    margin-top: 15px;
+
+}
+
+#button-register:hover{
+    background-color: rgb(197, 145, 0);
+    transform: scale(1.1);
+}
+
+#have-account {
+    padding-top: 30px;
+    text-align: center;
+}
+
+#go-with-link {
+    color:rgb(197, 145, 0);
+}
+
+#go-with-link:hover {
+    text-decoration: underline;
+    color: #000080;
+}
+
+.buttonAndLink {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin: auto;
+}
+

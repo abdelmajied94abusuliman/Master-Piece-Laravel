@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka+One&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+}
+
+.contact_bg {
+    height: 90vh;
+    background: url('../../public/image/ayla.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: left;
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact_bg h1 {
+    font-size: 4.3rem;
+
+}
+
+.line div{
+    margin: 0 0.4rem;
+}
+
+section{
+    padding-top: 100px;
+}
+
+#about_us_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: #000080;
+}
+
+.about_us_text {
+    font-size: 18px;
+    width: 70%;
+    align-items: center;
+    margin: auto;
+    padding: 30px;
+}
+
+
+
+.up {
+    position: fixed;
+    bottom: 100px;
+    right: -70px;
+    background-color: rgb(197, 145, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    font-family: Arial,Tahoma;
+    cursor: pointer;
+ }
+
+ .up img{
+    width: 100px;
+    height: 70px;
+
+ }
+
+ .up.show {
+    right: 35px;
+ }

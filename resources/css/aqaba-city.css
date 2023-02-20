@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka+One&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    /* position: fixed; */
+    /* z-index: -1; */
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+section{
+    padding-top: 100px;
+}
+
+#about_us_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: #000080;
+}
+
+.about_us_text {
+    font-size: 20px;
+    width: 70%;
+    align-items: center;
+    margin: auto;
+    padding: 30px;
+}
+
+.title-of-section {
+    font-family: 'Open Sans', sans-serif;
+    color: #000080;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    width: 80%;
+    margin: auto;
+}
+
+.container-image-and-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 88%;
+    margin: auto;
+}
+
+.image-realted-with-article {
+    width: 100%;
+    height: 303px;
+}
+
+.container-of-text-and-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 50px;
+    background-color: #00003E;
+    color: aliceblue;
+}
+
+.head-for-text {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.container-of-text-and-info {
+    height: 203px;
+}
+
+.link-to-article {
+    color: yellow;
+}
+
+.btn {
+    background-color: rgb(225, 192, 102);
+    width: 125px;
+    height: 40px;
+    border: none;
+    color: rgb(52, 60, 67);
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: bold;
+    transition: 0.7s ease;
+}
+
+.btn:hover {
+    background-color: rgb(220, 175, 49);
+    color:rgb(52, 60, 67);
+    transform: scale(1.08);
+}
+
+.up {
+    position: fixed;
+    bottom: 100px;
+    right: -70px;
+    background-color: rgb(197, 145, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    font-family: Arial,Tahoma;
+    cursor: pointer;
+}
+
+.up img{
+    width: 100px;
+    height: 70px;
+}
+
+.up.show {
+    right: 35px;
+}

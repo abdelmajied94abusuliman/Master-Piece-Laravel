@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka+One&family=Open+Sans&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0%;
+}
+
+
+
+
+
+/*                  START IMG SECTION AND SEARCH BAR                           */
+/*                  START IMG SECTION AND SEARCH BAR                           */
+/*                  START IMG SECTION AND SEARCH BAR                           */
+/*                  START IMG SECTION AND SEARCH BAR                           */
+
+
+
+
+
+
+
+section{
+    padding-top: 100px;
+}
+
+#image-and-search-home {
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-image: url('../../public/image/homeimg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#container-text-and-search {
+    text-align: center;
+    align-items: center;
+    color: aliceblue;
+    font-size: 38px;
+    margin-top: 15vh;
+}
+
+#first-line-intro{
+    font-weight:600;
+}
+
+#second-line-intro {
+    margin-top: -1vh;
+}
+
+#container-icon-and-search {
+    text-align: center;
+    align-items: center;
+}
+
+
+#button-for-search {
+    border: none;
+    height: 40px;
+    width: 70px;
+    color: aliceblue;
+    background-color: rgb(197, 145, 0);
+    font-size: 15px;
+
+}
+
+#button-for-search:hover{
+    background-color: rgb(133, 93, 0);
+}
+
+#search-bar{
+    border: 2px solid rgb(255, 255, 255);
+    border-left: none;
+    height: 40px;
+    width: 35vw ;
+    font-size: 14px;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+
+
+/*                  END IMG SECTION AND SEARCH BAR                           */
+/*                  END IMG SECTION AND SEARCH BAR                           */
+/*                  END IMG SECTION AND SEARCH BAR                           */
+/*                  END IMG SECTION AND SEARCH BAR                           */
+
+
+
+
+
+
+
+/*                  START SHOW SOME APARTMENTS                           */
+/*                  START SHOW SOME APARTMENTS                           */
+/*                  START SHOW SOME APARTMENTS                           */
+/*                  START SHOW SOME APARTMENTS                           */
+
+
+
+
+
+
+
+.the-sections-after-first {
+    padding-top: 50px;
+}
+
+.title-of-section {
+    font-family: 'Open Sans', sans-serif;
+    color: #000080;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    width: 80%;
+    margin: auto;
+}
+
+figure {
+    margin: 15px !important;
+    height: 385px;
+}
+
+#container-of-apartment-photos-and-description {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin-left: 5%;
+}
+
+#container-of-apartment-photos-and-description figure {
+    margin-top: 15vh;
+    -webkit-box-shadow: 0 0 10px rgb(0, 20, 148,0.5);
+        box-shadow: 0 0 10px rgb(0, 18, 134,0.5);
+}
+
+.apartment-image-in-explore {
+    width: 100%;
+    height: 235px;
+}
+
+.name-of-area-for-apartment {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#view-more-button {
+    width: 15%;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 7vh;
+    color: aliceblue;
+    background-color: #000080;
+    border-radius: 10px;
+    height: 8vh;
+    font-size: 20px;
+    line-height: 2;
+    cursor: pointer;
+    transition: 0.7s ease;
+    border: none;
+}
+
+#view-more-button:hover {
+    transform: scale(1.1);
+    background-color: rgb(207, 233, 255);
+    border: none;
+    color: #000080;
+}
+
+#view-more {
+    text-decoration: none;
+    color:aliceblue;
+    margin-left: 42%;
+}
+
+
+
+
+/*                  END SHOW SOME APARTMENTS                           */
+/*                  END SHOW SOME APARTMENTS                           */
+/*                  END SHOW SOME APARTMENTS                           */
+/*                  END SHOW SOME APARTMENTS                           */
+
+
+
+
+/*                  START ADVICE FOR CUSTOMERS                           */
+/*                  START ADVICE FOR CUSTOMERS                           */
+/*                  START ADVICE FOR CUSTOMERS                           */
+/*                  START ADVICE FOR CUSTOMERS                           */
+
+
+
+
+
+
+
+.container-image-and-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 85%;
+    margin: auto;
+}
+
+.container-image-and-text-hidden {
+    display: none;
+}
+
+.image-realted-with-article {
+    width: 100%;
+    height: 303px;
+}
+
+.container-of-text-and-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 50px;
+    background-color: rgb(239, 239, 239);
+}
+
+.head-for-text {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000080;
+}
+
+.container-of-text-and-info {
+    height: 203px;
+}
+
+.link-to-article:hover {
+    color: red;
+}
+
+
+
+
+/*                  END ADVICE FOR CUSTOMERS                           */
+/*                  END ADVICE FOR CUSTOMERS                           */
+/*                  END ADVICE FOR CUSTOMERS                           */
+/*                  END ADVICE FOR CUSTOMERS                           */
+
+
+
+
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+
+
+
+
+.up {
+    position: fixed;
+    bottom: 100px;
+    right: -70px;
+    background-color: rgb(197, 145, 0);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 12px;
+    font-family: Arial,Tahoma;
+    cursor: pointer;
+}
+
+.up img{
+    width: 100px;
+    height: 70px;
+}
+
+.up.show {
+    right: 35px;
+}
+
+
+
+
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+
+
+
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+
+
+
+@media screen and (max-device-width: 1024px){
+    #header-navbar-middle-tabs {
+        width: 125%;
+    }
+
+    #container-of-apartment-photos-and-description {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-device-width: 912px){
+    #header-navbar-middle-tabs {
+        width: 140%;
+        margin-left: -55px;
+    }
+
+    #container-text-and-search {
+        margin-top: 35vh;
+    }
+
+    .apartment-image-in-explore {
+        height: 180px;
+    }
+
+    figure {
+        height: 335px;
+    }
+}
+
+
+@media screen and (max-device-width: 820px){
+    #header-navbar-middle-tabs {
+        width: 155%;
+        margin-left: -75px;
+    }
+
+    #container-of-apartment-photos-and-description {
+        grid-template-columns: repeat(2, 1fr);
+        width: 85%;
+        margin-left: 9%;
+    }
+
+    .container-of-text-and-info {
+        height: 233px;
+        padding-top: 20px;
+    }
+
+    #container-copy-right {
+        width: 280px;
+    }
+    #view-more {
+        margin-left: 38vw;
+    }
+    #view-more-button {
+        width: 25%;
+        height: 6vh;
+    }
+}
+
+@media screen and (max-device-width: 768px){
+    .head-for-text {
+        font-size: 22px;
+        font-weight: bold;
+        color: #000080;
+    }
+}
+
+
+@media screen and (max-device-width: 540px){
+    #header-logo {
+        margin-left: 10%;
+        width: 30px;
+        height: 40px;
+    }
+    #header-navbar-users {
+        font-size: 11px;
+    }
+    #header-navbar-middle-tabs {
+        margin-left: -60px;
+        font-size: 11px;
+    }
+    #container-text-and-search {
+        font-size: 25px;
+    }
+    .apartment-image-in-explore {
+        height: 155px;
+    }
+    figure {
+        height: 270px;
+    }
+    #container-of-apartment-photos-and-description {
+        font-size: 13px;
+    }
+    #view-more-button {
+        font-size: 16px;
+    }
+    .title-of-section {
+        font-size: 20px;
+    }
+    .container-image-and-text {
+        display: none;
+    }
+    .container-image-and-text-hidden {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 85%;
+        margin: auto;
+    }
+    #footer-container {
+        font-size: 9px;
+    }
+    #footer-logo {
+        width: 50px;
+        height: 70px;
+    }
+}
+
+
+@media screen and (max-device-width: 415px){
+    #search-bar {
+        font-size: 11px;
+    }
+    #button-for-search {
+        height: 29.6px;
+        font-size: 12px;
+    }
+    #container-text-and-search {
+        margin-top: 19vh;
+    }
+    #second-line-intro {
+        margin-top: 0vh;
+    }
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 1.5rem;
+    }
+    #container-of-apartment-photos-and-description {
+        grid-template-columns: 1fr;
+    }
+    .container-of-text-and-info {
+        font-size: 13px;
+    }
+    .h2, h2 {
+        font-size: calc(10px + .9vw);
+    }
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 11px;
+    }
+    #footer-container {
+        font-size: 8px;
+    }
+    .up.show {
+        right: 10px;
+    }
+    .up {
+        bottom: 160px;
+        font-size: 15px;
+        padding: 8px;
+    }
+    .image-realted-with-article {
+        height: 235px;
+    }
+}
+
+
+@media screen and (max-device-width: 394px){
+    .up {
+        bottom: 75px;
+        font-size: 15px;
+        padding: 8px;
+    }
+}
+
+
+@media screen and (max-device-width: 360px){
+    .head-for-text {
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (max-device-width:280px) {
+    .h1, h1 {
+        font-size: 22px;
+    }
+    #container-text-and-search {
+        font-size: 19px;
+    }
+    #button-for-search {
+        width: 40px;
+    }
+    #search-bar {
+        width: 60vw;
+    }
+    #view-more-button {
+        width: 50%;
+        height: 5vh;
+    }
+    #view-more-button {
+        margin-left: -11vw;
+    }
+    .container-of-text-and-info {
+        font-size: 11px;
+    }
+    .head-for-text {
+        font-size: 14px;
+    }
+}
+
