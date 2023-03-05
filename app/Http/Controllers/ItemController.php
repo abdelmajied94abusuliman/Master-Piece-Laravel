@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Image;
 use App\Models\Item;
+use App\Models\User;
+use App\Models\Image;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
@@ -15,25 +16,25 @@ class ItemController extends Controller
      */
     public function index_rent_request()
     {
-        $rentReq = Item::where('service_id' , '1')->where('status' , 'Pending')->get();
+        $rentReq = Item::orderBy('created_at', 'desc')->where('service_id' , '1')->where('status' , 'Pending')->get();
         return view('admin.rentRequest' , ['data' => $rentReq]);
     }
 
     public function index_sell_request()
     {
-        $rentReq = Item::where('service_id' , '2')->where('status' , 'Pending')->get();
+        $rentReq = Item::orderBy('created_at', 'desc')->where('service_id' , '2')->where('status' , 'Pending')->get();
         return view('admin.sellRequest' , ['data' => $rentReq]);
     }
 
     public function index_rent_item()
     {
-        $rentReq = Item::where('service_id' , '1')->where('status' , 'Accepted')->get();
+        $rentReq = Item::orderBy('created_at', 'desc')->where('service_id' , '1')->where('status' , 'Accepted')->get();
         return view('admin.rentItem' , ['data' => $rentReq]);
     }
 
     public function index_sell_item()
     {
-        $rentReq = Item::where('service_id' , '2')->where('status' , 'Accepted')->get();
+        $rentReq = Item::orderBy('created_at', 'desc')->where('service_id' , '2')->where('status' , 'Accepted')->get();
         return view('admin.sellItem' , ['data' => $rentReq]);
     }
 
@@ -72,12 +73,10 @@ class ItemController extends Controller
             'status'=>'Pending',
             'frequency'=>$request->input('Frequency'),
             'description'=>$request->input('description'),
-            'location_url'=>$request->input('location_url'),
             'house_number'=>$request->input('house_number'),
             'street_name'=>$request->input('street_name'),
             'added_features'=>$request->input('added_features'),
             'general_details'=>$request->input('general_details'),
-
         ]);
 
         $ImageItem = new Image;
@@ -108,7 +107,31 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        $allItems = Item::orderBy('created_at', 'desc')->where('status' , 'Accepted')->get();
+        $data = [];
+        foreach ( $allItems as $singleData ){
+            $data[] = [
+                'id'=> $singleData->id,
+                'name_of_company' => $singleData->name,
+                'location' => $singleData->location,
+                'house_number' => $singleData->house_number,
+                'street_name' => $singleData->street_name,
+                'is_furnished' => $singleData->is_furnished,
+                'description' => $singleData->description,
+                'beds' => $singleData->beds,
+                'baths' => $singleData->baths,
+                'area' => $singleData->area,
+                'price' => $singleData->price,
+                'service' => $singleData->service->name,
+                'frequency' => $singleData->frequency,
+                'type' => $singleData->type->name,
+                'images'=> $singleData->images,
+            ];
+        };
+
+        // dd($data);
+
+        return view("user.services" , ['data' => $data]);
     }
 
     /**
@@ -165,5 +188,18 @@ class ItemController extends Controller
     {
         Item::destroy($id);
         return redirect('/admin/sellOnSite');
+    }
+
+    public function seeDescription($id)
+    {
+        $itemDesc = Item::where('id', $id)->get();
+        $itemIMG = Image::where('item_id' , $id)->get();
+        foreach ( $itemIMG as $singleData ){
+            $images[] = $singleData->image;
+        };
+        $userID = $itemDesc[0]->user_id;
+        $itemOwner = User::where('id' , $userID )->get();
+        $userIMG = $itemOwner[0]->image;
+        return view('/admin/seeDescription' , ['itemDesc' => $itemDesc , 'images'=> $images , 'userIMG'=>$userIMG]);
     }
 }

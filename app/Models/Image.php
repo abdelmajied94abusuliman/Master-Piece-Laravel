@@ -10,4 +10,7 @@ class Image extends Model
     use HasFactory;
 
     protected $fillable = ['image', 'item_id'];
+    public function item(){
+        return $this->belongsTo(ItemController::class);
+    }
 }

@@ -49,7 +49,7 @@
                                                 <td>Apartment</td>
                                             @endif
                                             <td>{{$item->price}} JD</td>
-                                            <td><a href="#">See Description</a></td>
+                                            <td><a href="{{route('admin.descripItem' , ['id' => $item->id])}}">See Description</a></td>
                                             <td scope="col"><a href="{{route('admin.destroyRI' , ['id' => $item->id])}}">Delete</a></td>
                                         </tr>
                                     @endforeach

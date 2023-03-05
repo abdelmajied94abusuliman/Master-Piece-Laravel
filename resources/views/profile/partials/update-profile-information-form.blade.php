@@ -44,7 +44,7 @@
 
         }
         .name{
-            font-size:20px;
+            font-size:18px;
             color: rgb(0, 0, 0) ;
             text-align: center;
         }
@@ -106,7 +106,7 @@
 
 <body>
     <div class="contanerr ">
-     <section>
+     <section style="padding-top: 10px;">
 
          <header style="display: flex; flex-direction : column ; height: 53vh; margin-left : 25vw ; padding-top : 2vh" >
                 <div class="header1">
@@ -115,7 +115,7 @@
                         <br>
                         <br>
                     @else
-                        <img src='{{URL::asset("storage/image/".auth()->user()->image)}}' id="profile-img" style="display: block ; width : 17vw ; height : 22vw">
+                        <img src='{{URL::asset("storage/image/".auth()->user()->image)}}' id="profile-img" style="display: block ; width : 17vw ; height : 23vw">
                         <br>
                         <br>
                     @endif
@@ -128,8 +128,11 @@
                             <button type="submit">Update Photo</button>
                         </form>
                         <br><br>
-                        <a><button style="margin-left: 2vw ; width : 20vw ; font-size : 14px ; height : 5vh" >
+                        <a href="/#"><button style="margin-left: 2vw ; margin-bottom: 1vw ; width : 20vw ; font-size : 14px ; height : 5vh" >
                             See Your Items
+                        </button></a>
+                        <a href="/add-your-adv-for-your-item"><button style="margin-left: 2vw ; width : 20vw ; font-size : 14px ; height : 5vh" >
+                            Add New Item
                         </button></a>
                     </main>
                 </div>

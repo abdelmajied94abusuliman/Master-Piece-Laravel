@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,12 +35,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/add-your-adv-for-your-item' , function(){return view('user.addRequest');});
 });
 
-Route::get('/services' , function(){ return view('user.services'); });
+Route::get('/services' , [ItemController::class , 'show'])->name('show-items');
+Route::get('/filter' , [ServiceController::class , 'show'])->name('filter-items');
 Route::get('/home' , function(){ return view('user.home');});
 Route::get('/about_us' , function(){ return view('user.about_us');});
 Route::get('/contact_us' , function(){ return view('user.contact_us');});
 Route::get('/aqaba-city' , function(){ return view('user.aqaba-city');});
-Route::get('/single' , function(){ return view('user.single');});
+Route::get('/single/{item_id}' , [ItemController::class , 'index'])->name('singleItem');
+
+
+
 
 Route::get('adminLogin' , function(){ return view('admin.adminLogin');});
 
@@ -56,6 +61,7 @@ Route::middleware(['admin'])->name('admin.')->group(function(){
     Route::get('admin/{id}/sr' , [ItemController::class , 'destroy_sell_req'])->name('destroySR');
     Route::get('admin/{id}/rentOnSite' , [ItemController::class , 'destroy_rent_itm'])->name('destroyRI');
     Route::get('admin/{id}/sellOnSite' , [ItemController::class , 'destroy_sell_itm'])->name('destroySI');
+    Route::get('admin/{id}/seeDescription' , [ItemController::class , 'seeDescription'])->name('descripItem');
 
 
     Route::resource('admin/admins' , AdminController::class);

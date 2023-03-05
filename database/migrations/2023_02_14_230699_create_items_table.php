@@ -30,7 +30,6 @@ return new class extends Migration
 
             $table->string('house_number');
             $table->string('street_name');
-            $table->string('location_url');
             $table->longText('description');
             $table->string('general_details')->default(null);
             $table->string('added_features')->default(null);

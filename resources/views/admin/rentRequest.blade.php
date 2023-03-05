@@ -50,7 +50,7 @@
                                                 <td>Apartment</td>
                                             @endif
                                             <td>{{$item->price}} JD</td>
-                                            <td><a href="#">See Description</a></td>
+                                            <td><a href="{{route('admin.descripItem' , ['id' => $item->id])}}">See Description</a></td>
                                             <td><button>Accept</button></td>
                                             <td scope="col"><a href="{{route('admin.destroyRR' , ['id' => $item->id])}}">Delete</a></td>
                                         </tr>

@@ -97,31 +97,11 @@
                     </div>
 
                 </div>
-                <div id="table-form">
-                    <div style="padding-top: 3vw"><label>Upload Images <span style="color: red">*</span></label></div>
-                    <div>
-                        <input required type="file" name="images[]" accept="image/*" multiple style="width : 13.5vw ; height : 10vh ; padding-top : 1vw">
-                    </div>
-                </div>
-
-                <div id="table-form">
-                    <div style="padding-top: 3vw"><label>URL Location On Google Map</label></div>
-                    <div>
-                        <input required type="text" name="location_url" style="width : 23.5vw ; height : 3vh ; padding-top : 1vw">
-                    </div>
-                </div>
 
                 <div id="table-form">
                     <div style="padding-top: 1vw"><label>House Number <span style="color: red">*</span></label></div>
                     <div>
                         <input required type="text" name="house_number" style="width : 23.5vw ; height : 3vh ; padding-top : 1vw">
-                    </div>
-                </div>
-
-                <div id="table-form">
-                    <div style="padding-top: 1vw"><label>Add Features</label></div>
-                    <div>
-                        <input type="text" name="added_features" style="width : 23.5vw ; height : 10vh ; padding-top : 1vw">
                     </div>
                 </div>
 
@@ -133,6 +113,14 @@
                 </div>
 
                 <div id="table-form">
+                    <div style="padding-top: 1vw"><label>Add Features</label></div>
+                    <div>
+                        <input type="text" name="added_features" style="width : 23.5vw ; height : 10vh ; padding-top : 1vw">
+                    </div>
+                </div>
+
+
+                <div id="table-form">
                     <div style="padding-top: 1vw"><label>General Details</label></div>
                     <div>
                         <input type="text" name="general_details" style="width : 23.5vw ; height : 10vh ; padding-top : 1vw">
@@ -142,7 +130,13 @@
                 <div id="table-form">
                     <div style="padding-top: 1vw"><label>Description <span style="color: red">*</span></label></div>
                     <div>
-                        <textarea type="text" name="description" style="width : 33.5vw ; height : 10vh ; padding-top : 1vw">Descripe your Apartment/House.</textarea>
+                        <textarea placeholder="Descripe your Apartment/House." type="text" name="description" style="width : 33.5vw ; height : 10vh ; padding-top : 1vw"></textarea>
+                    </div>
+                </div>
+                <div id="table-form">
+                    <div style="padding-top: 3vw"><label>Upload Images <span style="color: red">*</span></label></div>
+                    <div>
+                        <input type="file" name="images[]" accept="image/*" multiple style="width : 13.5vw ; height : 10vh ; padding-top : 1vw">
                     </div>
                 </div>
 

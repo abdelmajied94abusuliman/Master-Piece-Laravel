@@ -12,8 +12,11 @@
         </div>
         @if(auth()->check())
             <div id="header-navbar-users">
-                <a class="header-links-to-pages" href="/profile" style="margin-right: 25px;">Profile</a>
+                <a class="header-links-to-pages" href="/profile">Profile</a>
                 <a class="header-links-to-pages" href="{{route('logout')}}">Logout</a>
+                @if(auth()->user()->is_admin)
+                    <a class="header-links-to-pages" href="admin/index" style="color: gold">Dashboard</a>
+                @endif
             </div>
         @else
             <div id="header-navbar-users">

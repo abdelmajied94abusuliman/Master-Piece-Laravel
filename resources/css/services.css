@@ -111,6 +111,7 @@ input:focus{
     margin-top: 1.25rem;
     display: flex;
     justify-content: space-around;
+    width: 95.5vw;
 }
 
 #container-apartment-pic-and-description {
@@ -139,6 +140,12 @@ input:focus{
 .apartment-location {
     width: 35rem;
     height: 18rem;
-    /* margin-right: 1.5rem; */
 }
 
+#short-description {
+    display: -webkit-box;
+    width: 30vw;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
