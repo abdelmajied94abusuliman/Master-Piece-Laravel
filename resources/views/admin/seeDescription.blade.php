@@ -29,7 +29,7 @@
     </div>
     <div>
         <p style="margin-left:7vw ; font-weight:bold">Owner</p>
-        <img style="height:57vh ; margin:auto" src="{{URL::asset("storage/image/$userIMG")}}"  alt="">
+        <img style="height:55vh ; margin:auto" src="{{URL::asset("storage/image/$userIMG")}}"  alt="">
     </div>
     {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1077.5770096356557!2d35.02324986293484!3d29.549737643612897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2sjo!4v1674046873059!5m2!1sar!2sjo" width="400" height="425" style="border:0; margin-right: 6rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
 </div>
@@ -52,27 +52,9 @@
     </div>
 </div>
 
-<h2 id="description">Description :</h2>
-<div id="container-description">
+<h2 id="description" style="margin-left : 20vw">Description :</h2>
+<div id="container-description" style="margin-left : 20vw">
     <p style="max-width: 50vw">{{$itemDesc[0]->description}}</p>
-    <div id="general-and-contact-contaienr">
-        <div>
-            <p style="font-weight: bold;">General details :</p>
-            @if ($itemDesc[0]->general_details != NULL)
-                <p>{{$itemDesc[0]->general_details}}</p>
-            @else
-                <p>-</p>
-            @endif
-        </div>
-    </div>
-    <div>
-        <p style="font-weight: bold;">Added features :</p>
-        @if ($itemDesc[0]->added_features != NULL)
-            <p>{{$itemDesc[0]->added_features}}</p>
-        @else
-            <p>-</p>
-        @endif
-    </div>
 </div>
 
 

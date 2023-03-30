@@ -15,7 +15,7 @@
     <div class="content">
 
         <div class="container pt-4 px-4" style="margin-bottom: 30px; margin-left:-190px;">
-            <div class="row g-4">
+            <div class="row g-4" style="margin-left: 13vw; max-width:89vw">
                 <div class="col-12 offset-md-1">
                     <div class="bg-secondary rounded h-100 p-4" style="background-color: #fff !important; ">
                         <div style="margin-bottom: 5vh">

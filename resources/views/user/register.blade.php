@@ -24,14 +24,6 @@
                 </div>
 
 
-                {{-- <div id="table-form">
-                    <div><label>Last Name</label></div>
-                    <div><input id="last-name" type="text" name="lname" onchange="checkLastName()"></div>
-                    <div id="lastname-warining" style="display: none; color:red; font-size: 12px; margin-bottom: 25px; margin-top:-15px">*Please don't use numbers or Char. And don't let it empty.</div>
-                    <div id="lastname-accept" style="display: none; color:green; font-size: 12px; margin-bottom: 25px; margin-top:-15px">Name is okay.</div>
-                </div> --}}
-
-
                 <div id="table-form">
 
                     <div><label>E-mail</label></div>
@@ -41,14 +33,6 @@
                     <div id="email-warining" style="display: none; color:red; font-size: 12px; margin-bottom: 25px; margin-top:-15px">*Invalid Email.</div>
                     <div id="email-accept" style="display: none; color:green; font-size: 12px; margin-bottom: 25px; margin-top:-15px">Email is okay.</div>
                 </div>
-
-
-                {{-- <div id="table-form">
-                    <div><label>Mobile</label></div>
-                    <div><input id="your-mobile" type="number" name="mobile" onchange="checkMobile()"></div>
-                    <div id="mobile-warining" style="display: none; color:red; font-size: 12px; margin-bottom: 25px; margin-top:-15px">*Invalid Number</div>
-                    <div id="mobile-accept" style="display: none; color:green; font-size: 12px; margin-bottom: 25px; margin-top:-15px">The Number is okay.</div>
-                </div> --}}
 
 
                 <div id="table-form">
@@ -64,6 +48,15 @@
 
                     <td><label>Confirm Password</label></td>
                     <td><input onchange="checkConfirmation()" id="password_confirmation" class="block mt-1 w-full"  type="password" name="password_confirmation" required ></td>
+
+
+                    <div id="confirm-warining" style="display: none; color:red; font-size: 12px; margin-bottom: 25px; margin-top:-15px">*Your Password doesn't matched.</div>
+                    <div id="confirm-accept" style="display: none; color:green; font-size: 12px; margin-bottom: 25px; margin-top:-15px">Password is okay.</div>
+                </div>
+                <div id="table-form">
+
+                    <td><label>Mobile</label></td>
+                    <td><input id="mobile" class="block mt-1 w-full"  type="number" name="mobile" required ></td>
 
 
                     <div id="confirm-warining" style="display: none; color:red; font-size: 12px; margin-bottom: 25px; margin-top:-15px">*Your Password doesn't matched.</div>

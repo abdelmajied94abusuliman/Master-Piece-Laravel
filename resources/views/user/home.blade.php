@@ -25,38 +25,29 @@
             <p>Explore Rentals in Aqaba</p>
         </div>
         <div id="container-of-apartment-photos-and-description">
-            <figure>
-                <img src="{{URL::asset('storage/image/2516846-800x600.jpg')}}" alt="200 Sq. M. | JOD10,000 Yearly" class="apartment-image-in-explore">
-                <figcaption>
-                    <p class="name-of-area-for-apartment">The seventh residential area, Aqaba</p>
-                    <p>24, Basman St.</p>
-                    <p>200 Sq. M. | JOD10,000 Yearly</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="{{URL::asset('storage/image/2533618-800x600.jpg')}}" alt="120 Sq. M. | JOD 265 Monthly" class="apartment-image-in-explore">
-                <figcaption>
-                    <p class="name-of-area-for-apartment">The fifth residential area, Aqaba</p>
-                    <p>3, Yuhanna Ben Ruba St.</p>
-                    <p>120 Sq. M. | JOD 265 Monthly</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="{{URL::asset('storage/image/2557959-800x600.jpg')}}" alt="110 Sq. M. | JOD 45 Daily" class="apartment-image-in-explore">
-                <figcaption>
-                    <p class="name-of-area-for-apartment">Al-Mahdood area, Aqaba</p>
-                    <p>11, Khalil Jubran St.</p>
-                    <p>110 Sq. M. | JOD 45 Daily</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="{{URL::asset('storage/image/2563440-800x600.jpg')}}" alt="350 Sq. M. | JOD 2,300 Monthly" class="apartment-image-in-explore">
-                <figcaption>
-                    <p class="name-of-area-for-apartment">Al-Manara area, Aqaba</p>
-                    <p>11, Pr. Mohammad St., Aqaba</p>
-                    <p>350 Sq. M. | JOD 2,300 Monthly</p>
-                </figcaption>
-            </figure>
+            @foreach ($data as $item)
+                <a id="singleItem" href={{route('singleItem' , ['item_id'=>$item['id']])}}>
+                    <figure>
+                        <?php $i = 0?>
+                        @foreach ($item['images'] as $image)
+                            @if ($i == 0)
+                                <img src="{{URL::asset('storage/image/'.$image['image'])}}" alt="200 Sq. M. | JOD10,000 Yearly" class="apartment-image-in-explore">
+                                <?php $i++ ?>
+                            @endif
+                        @endforeach
+                        <figcaption>
+                            <p class="name-of-area-for-apartment">{{$item['name_of_company']}}</p>
+                            <p>{{$item['location']}}</p>
+                            <p>{{$item['area']}} Sq. M. |
+                                @if ($item['service'] == 'Sell')
+                                    JOD {{$item['price']}}</p>
+                                @else
+                                    JOD {{$item['price']}}/{{$item['frequency']}}</p>
+                                @endif</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            @endforeach
         </div>
         <a id="view-more" href="./services"><button id="view-more-button">View more</button></a>
     </section>

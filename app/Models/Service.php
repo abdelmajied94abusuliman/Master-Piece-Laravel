@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     use HasFactory;
+
     protected $fillable = ['name'];
+
     public function item(){
         return $this->hasMany(ItemController::class);
     }

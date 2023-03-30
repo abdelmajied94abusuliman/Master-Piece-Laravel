@@ -19,10 +19,8 @@
         }
         .header11 h2{
             margin-left:20px;
-            padding-top:5vh ;
             font-size:40px;
             text-align: center;
-            padding-bottom: 50px;
             margin: 0px;
             padding-bottom:50px;
         }
@@ -101,6 +99,20 @@
             background-color: rgb(116, 116, 116);
             color: white;
         }
+        #btnUpdatePhoto{
+            font-size: 16px;
+            padding: 0.5vw;
+            background-color: rgb(0, 154, 0);
+            border: none;
+            color: aliceblue;
+        }
+        #image {
+            margin-top: 2vw;
+            font-size: 14px
+        }
+        #btnSavePass {
+            margin-top: 2vw;
+        }
 
     </style>
 
@@ -125,7 +137,7 @@
                             @method('PUT')
                             <h3 for="">Change Profile Picture</h3>
                             <input type="file" required name="image" id="image"><br><br>
-                            <button type="submit">Update Photo</button>
+                            <button type="submit" id="btnUpdatePhoto">Update Photo</button>
                         </form>
                         <br><br>
                         <a href="/#"><button style="margin-left: 2vw ; margin-bottom: 1vw ; width : 20vw ; font-size : 14px ; height : 5vh" >
@@ -147,7 +159,7 @@
                     {{-- </h2> --}} </h1>
 
                 <div>
-            </div>
+                    </div>
             <form method="post" action="{{ route('profile.update') }}">
                 @csrf
                 @method('patch')
@@ -253,7 +265,7 @@
         <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="mt-2" />
         </div>
 
-            <x-primary-button class="butt">{{ __('Save') }}</x-primary-button>
+            <x-primary-button class="butt" id="btnSavePass">{{ __('Save') }}</x-primary-button>
     </div>
 
             <div class="flex items-center gap-4">

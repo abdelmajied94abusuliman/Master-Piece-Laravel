@@ -8,26 +8,17 @@
 
 @section('content')
 
-    <h1 style="font-size: 2.3rem;">Ihab Al-Kasasbeh Housing Company</h1>
+    <h1 style="font-size: 2.3rem;">{{$data['name_of_company']}}</h1>
     <div id="container-gallary-and-location">
         <div>
             <div class="slider">
-            <div class="slide">
-                    <img src="{{URL::asset('storage/image/2516837-800x600.jpg')}}" alt="Photo1"/>
-                </div>
-            <div class="slide">
-                    <img src="{{URL::asset('storage/image/2516838-800x600.jpg')}}" alt="Photo3"/>
-                </div>
-            <div class="slide">
-                    <img src="{{URL::asset('storage/image/2516846-800x600.jpg')}}" alt="Photo2"/>
-                </div>
-            <div class="slide">
-                    <img src="{{URL::asset('storage/image/2533618-800x600.jpg')}}" alt="Photo3"/>
-                </div>
-
+                @foreach ($data['images'] as $image)
+                    <div class="slide">
+                        <img src="{{URL::asset('storage/image/'.$image['image'])}}" alt="Photo1"/>
+                    </div>
+                @endforeach
                 <button class="btn-slide prev"><i class="fas fa-3x fa-chevron-circle-left"></i></button>
                 <button class="btn-slide next"><i class="fas fa-3x fa-chevron-circle-right"></i></button>
-
             </div>
             <div class="dots-container" style="display: none;">
                     <span class="dot active" data-slide="0"></span>
@@ -36,46 +27,49 @@
             <span class="dot" data-slide="3"></span>
             </div>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1077.5770096356557!2d35.02324986293484!3d29.549737643612897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2sjo!4v1674046873059!5m2!1sar!2sjo" width="400" height="425" style="border:0; margin-right: 6rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div>
+            <p style="margin-left:7vw ; font-weight:bold">Owner</p>
+            {{-- {{dd($data['ownerImage'])}} --}}
+            <img style="height:57vh ; margin:auto" src="{{URL::asset('storage/image/'.$data['ownerImage'])}}"  alt="">
+        </div>
     </div>
 
 
     <div id="container-details-in-single">
         <div class="apartment-details" style="border-right: 1px solid black; padding-right:10rem">
-            <p><strong> Location</strong> : The seventh residential area, Aqaba</p>
-            <p><strong> House Num./Street</strong> : 24, Basman St.</p>
-            <p><strong> Rent </strong> : 10,000 JOD / Yearly</p>
+            <p><strong> Location</strong> : {{$data['location']}}</p>
+            <p><strong> House Num./Street</strong> : {{$data['house_number']}} - {{$data['street_name']}} Str.</p>
+            @if($data['service'] == "Rent")
+                <p><strong> Rent </strong> : {{$data['price']}} JOD / {{$data['frequency']}}</p>
+            @else
+                <p><strong> Sell </strong> : {{$data['price']}} JOD</p>
+            @endif
         </div>
         <div class="apartment-details">
-            <p><i class="fa-solid fa-bed" style="color:green; font-size: 1.4rem;"></i> <strong> 3 Beds </strong></p>
-            <p><i class="fa-solid fa-bath" style="color:rgb(34, 196, 255); font-size: 1.4rem;"></i><strong> 2 Baths </strong></p>
-            <p><img src="{{URL::asset('storage/image/sqm.png')}}" alt="SQM" style="width: 1.1rem; height:1.1rem"> <strong> 200 Sq. M. </strong></p>
+            <p><i class="fa-solid fa-bed" style="color:green; font-size: 1.4rem;"></i> <strong> {{$data['beds']}} Beds </strong></p>
+            <p><i class="fa-solid fa-bath" style="color:rgb(34, 196, 255); font-size: 1.4rem;"></i><strong> {{$data['baths']}} Baths </strong></p>
+            <p><img src="{{URL::asset('storage/image/sqm.png')}}" alt="SQM" style="width: 1.1rem; height:1.1rem"> <strong> {{$data['area']}} Sq. M. </strong></p>
         </div>
     </div>
 
     <h2 id="description">Description :</h2>
     <div id="container-description">
-        <p>Furnished Apartment For Rent In The seventh residential area.</p>
-        <p>The seventh residential area - Aqaba is a very prime location.</p>
-        <div id="general-and-contact-contaienr">
-            <div>
-                <p style="font-weight: bold;">General details :</p>
-                <ul>
-                    <li>First Floor.</li>
-                    <li>200 sq m built-up area.</li>
-                    <li>The building is 15 years old.</li>
-                    <li>Price: 10,000 JOD.</li>
-                </ul>
+        <p style="max-width: 50vw">{{$data['description']}}.</p>
+        {{-- @if(!auth()->user()->is_admin) --}}
+            <div id="general-and-contact-contaienr">
+                @if(auth()->check())
+                    <div id="btn-owner">
+                        <a href="https://wa.me/{{$data['mobile']}}?text=I'am%20interessting%20to%20know%20more%20about%20your%20Add."><button>Contact With Owner</button></a>
+                        <p>{{$data['mobile']}}</p>
+                    </div>
+                @else
+                    <div id="btn-owner">
+                        <a href='/login'><button>Contact With Owner</button></a>
+                        <p>Please Login To See The Contact's Information.</p>
+                    </div>
+                @endif
             </div>
-            <div id="btn-owner">
-                <a href="#"><button>Contact With Owner</button></a>
-                <p>Pleas Login To See The Contact's Information.</p>
-            </div>
-        </div>
-        <div>
-            <p style="font-weight: bold;">Added features :</p>
-            <p>3 bedrooms-3 bathrooms -store room- laundry room- kitchen- built in wardrobe- balcony-Manual shutters- Refrigerator -washing machine-dish washer- dryer- solar heater- garage.</p>
-        </div>
+        {{-- @endif --}}
     </div>
 
 
@@ -85,38 +79,29 @@
             <p>Suggested Apartment</p>
         </div>
         <div id="container-of-apartment-photos-and-description">
-            <figure>
-                <img src="IMG/2516846-800x600.jpg" alt="200 Sq. M. | JOD10,000 Yearly" class="apartment-image-in-explore">
-                <figcaption>
-                    <p class="name-of-area-for-apartment">The seventh residential area, Aqaba</p>
-                    <p>24, Basman St.</p>
-                    <p>200 Sq. M. | JOD10,000 Yearly</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="./IMG/2533618-800x600.jpg" alt="120 Sq. M. | JOD 265 Monthly" class="apartment-image-in-explore">
-                <figcaption>
-                    <p class="name-of-area-for-apartment">The fifth residential area, Aqaba</p>
-                    <p>3, Yuhanna Ben Ruba St.</p>
-                    <p>120 Sq. M. | JOD 265 Monthly</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="IMG/2557959-800x600.jpg" alt="110 Sq. M. | JOD 45 Daily" class="apartment-image-in-explore">
-                <figcaption>
-                    <p class="name-of-area-for-apartment">Al-Mahdood area, Aqaba</p>
-                    <p>11, Khalil Jubran St.</p>
-                    <p>110 Sq. M. | JOD 45 Daily</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="IMG/2563440-800x600.jpg" alt="350 Sq. M. | JOD 2,300 Monthly" class="apartment-image-in-explore">
-                <figcaption>
-                    <p class="name-of-area-for-apartment">Al-Manara area, Aqaba</p>
-                    <p>11, Pr. Mohammad St., Aqaba</p>
-                    <p>350 Sq. M. | JOD 2,300 Monthly</p>
-                </figcaption>
-            </figure>
+            @foreach ($Suggested as $item)
+                <a id="singleItem" href={{route('singleItem' , ['item_id'=>$item['id']])}}>
+                    <figure>
+                        <?php $i = 0?>
+                        @foreach ($item['images'] as $image)
+                            @if ($i == 0)
+                                <img src="{{URL::asset('storage/image/'.$image['image'])}}" alt="200 Sq. M. | JOD10,000 Yearly" class="apartment-image-in-explore">
+                                <?php $i++ ?>
+                            @endif
+                        @endforeach
+                        <figcaption>
+                            <p class="name-of-area-for-apartment">{{$item['name_of_company']}}</p>
+                            <p>{{$item['location']}}</p>
+                            <p>{{$item['area']}} Sq. M. |
+                                @if ($item['service'] == 'Sell')
+                                    JOD {{$item['price']}}</p>
+                                @else
+                                    JOD {{$item['price']}}/{{$item['frequency']}}</p>
+                                @endif</p>
+                        </figcaption>
+                    </figure>
+                </a>
+            @endforeach
         </div>
     </section>
 

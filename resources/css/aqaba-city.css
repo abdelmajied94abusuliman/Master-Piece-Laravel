@@ -71,7 +71,7 @@ section{
 }
 
 .container-of-text-and-info {
-    height: 203px;
+    height: 19.75vw;
 }
 
 .link-to-article {
@@ -79,11 +79,11 @@ section{
 }
 
 .btn {
-    background-color: rgb(225, 192, 102);
-    width: 125px;
+    background-color: rgb(225, 192, 102) !important;
+    width: 12vw !important;
     height: 40px;
     border: none;
-    color: rgb(52, 60, 67);
+    color: rgb(52, 60, 67) !important;
     font-size: 13px;
     margin-top: 5px;
     font-weight: bold;
@@ -91,8 +91,8 @@ section{
 }
 
 .btn:hover {
-    background-color: rgb(220, 175, 49);
-    color:rgb(52, 60, 67);
+    background-color: rgb(220, 175, 49) !important;
+    color:rgb(52, 60, 67) !important;
     transform: scale(1.08);
 }
 

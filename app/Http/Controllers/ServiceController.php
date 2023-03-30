@@ -65,8 +65,8 @@ class ServiceController extends Controller
                     if($price != 0){
                         $allItems->where('price', '>=' , $price)->where('price'  , '<=' , $price+300);
                     }
-                    
-                    $allItems->paginate(2);
+
+                    // $allItems->paginate(2);
 
         $allItems = $allItems->get();
 

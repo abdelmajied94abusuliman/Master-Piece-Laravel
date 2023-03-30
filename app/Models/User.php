@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'image',
+        'mobile',
     ];
 
     /**
@@ -41,4 +43,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function item(){
+        return $this->hasMany(ItemController::class);
+    }
 }

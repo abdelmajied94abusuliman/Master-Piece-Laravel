@@ -1,18 +1,20 @@
+@vite([''])
+
 
 
 <header id="header-navbar">
     <div id="header-navbar-container">
-        <a href="./home"><img src="{{URL::asset("storage/image/logo.png")}}" id="header-logo"></a>
+        <a href="{{route('home')}}"><img src="{{URL::asset("storage/image/logo.png")}}" id="header-logo"></a>
         <div id="header-navbar-middle-tabs">
-            <a class="header-links-to-pages" href="./home" >Home</a>
-            <a class="header-links-to-pages" href="./services">Services</a>
-            <a class="header-links-to-pages" href="./about_us">About us</a>
-            <a class="header-links-to-pages" href="./contact_us">Contact us</a>
-            <a class="header-links-to-pages" href="./aqaba-city">Aqaba City</a>
+            <a class="header-links-to-pages" href="{{route('home')}}" >Home</a>
+            <a class="header-links-to-pages" href="{{route('show-items')}}">Services</a>
+            <a class="header-links-to-pages" href="{{route('aboutUS')}}">About us</a>
+            <a class="header-links-to-pages" href="{{route('contactUS')}}">Contact us</a>
+            <a class="header-links-to-pages" href="{{route('aqabaCity')}}">Aqaba City</a>
         </div>
         @if(auth()->check())
             <div id="header-navbar-users">
-                <a class="header-links-to-pages" href="/profile">Profile</a>
+                <a class="header-links-to-pages" href="{{route('profile.edit')}}">Profile</a>
                 <a class="header-links-to-pages" href="{{route('logout')}}">Logout</a>
                 @if(auth()->user()->is_admin)
                     <a class="header-links-to-pages" href="admin/index" style="color: gold">Dashboard</a>
@@ -69,5 +71,6 @@
                     </div>
                   </div>
               </nav>
+
         </nav>
 </header>

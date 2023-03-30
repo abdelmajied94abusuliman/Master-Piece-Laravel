@@ -113,21 +113,6 @@
                 </div>
 
                 <div id="table-form">
-                    <div style="padding-top: 1vw"><label>Add Features</label></div>
-                    <div>
-                        <input type="text" name="added_features" style="width : 23.5vw ; height : 10vh ; padding-top : 1vw">
-                    </div>
-                </div>
-
-
-                <div id="table-form">
-                    <div style="padding-top: 1vw"><label>General Details</label></div>
-                    <div>
-                        <input type="text" name="general_details" style="width : 23.5vw ; height : 10vh ; padding-top : 1vw">
-                    </div>
-                </div>
-
-                <div id="table-form">
                     <div style="padding-top: 1vw"><label>Description <span style="color: red">*</span></label></div>
                     <div>
                         <textarea placeholder="Descripe your Apartment/House." type="text" name="description" style="width : 33.5vw ; height : 10vh ; padding-top : 1vw"></textarea>
