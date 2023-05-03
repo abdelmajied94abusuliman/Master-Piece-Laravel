@@ -50,8 +50,10 @@ class ServiceController extends Controller
     {
         $beds = $request->beds;
         $price = $request->price;
-        // dd($price);
+        $furnished = $request->furnished;
         $service = $request->typeOfService;
+
+        // dd($price);
 
         // if($price == 0){
         //     $allItems = Item::orderBy('created_at', 'desc')->where('status' , 'Accepted')->where('beds', '>=' , $beds)->get();
@@ -59,17 +61,59 @@ class ServiceController extends Controller
         //     $allItems = Item::orderBy('created_at', 'desc')->where('status' , 'Accepted')->where('beds', '>=' , $beds)->where('price', '>=' , $price)->where('price'  , '<=' , $price+300)->get();
         // }
 
+        $ServiceFilter = 'All';
+        $BedsFilter = 0;
+        $PriceFilter = 0;
+        $FurnishedFilter = 'AllApartments';
+
         $allItems = Item::query();
 
-                    $allItems->orderBy('created_at', 'desc')->where('status' , 'Accepted')->where('beds', '>=' , $beds);
-                    if($price != 0){
-                        $allItems->where('price', '>=' , $price)->where('price'  , '<=' , $price+300);
-                    }
+            if($service == 'Rent'){
+                $allItems->orderBy('created_at', 'desc')->where('status' , 'Accepted')->where('service_id' , '1');
+                $ServiceFilter = "Rent";
+            } else if ($service == 'Buy') {
+                $allItems->orderBy('created_at', 'desc')->where('status' , 'Accepted')->where('service_id' , '2');
+                $ServiceFilter = "Buy";
+            } else {
+                $allItems->orderBy('created_at', 'desc')->where('status' , 'Accepted');
+                $ServiceFilter = "All";
+            }
 
-                    // $allItems->paginate(2);
+            if($beds == 3 || $beds == 0){
+                $allItems->orderBy('created_at', 'desc')->where('status' , 'Accepted')->where('beds' , '>=' , $beds);
+                if($beds == 3){
+                    $BedsFilter = 3;
+                } else {
+                    $beds = 0;
+                }
+            } else {
+                $allItems->orderBy('created_at', 'desc')->where('status' , 'Accepted')->where('beds' , $beds);
+                $BedsFilter = $beds;
+            }
 
-        $allItems = $allItems->get();
+            if($price == 1){
+                $allItems->where('price', '>=' , $price)->where('price'  , '<=' , $price+100);
+                $PriceFilter = 1;
+            } else if ($price != 0) {
+                $allItems->where('price', '>=' , $price)->where('price'  , '<=' , $price+300);
+                $PriceFilter = $price;
+            }
 
+            if($furnished == 'not-furnished'){
+                $allItems->orderBy('created_at', 'desc')->where('status' , 'Accepted')->where('is_furnished' , '0');
+                $FurnishedFilter = 'not-furnished';
+            } else if ($furnished == 'furnished') {
+                $allItems->orderBy('created_at', 'desc')->where('status' , 'Accepted')->where('is_furnished' , '1');
+                $FurnishedFilter = 'furnished';
+            } else {
+                $allItems->orderBy('created_at', 'desc')->where('status' , 'Accepted');
+                $FurnishedFilter = 'AllApartments';
+            }
+
+        $allItems = $allItems->paginate(4);
+
+        // dd($ServiceType);
+        // $allItems->appends(['is_furnished' => $request->furnished]);
 
 
 
@@ -97,7 +141,7 @@ class ServiceController extends Controller
 
         // dd($data);
 
-        return view("user.filters" , ['data' => $data]);
+        return view("user.filters" , ['data' => $data , 'allItems'=>$allItems , 'ServiceFilter'=>$ServiceFilter , 'BedsFilter'=>$BedsFilter , 'PriceFilter'=>$PriceFilter , 'FurnishedFilter'=>$FurnishedFilter]);
 
 
         if($request->furnished == 'AllApartments'){

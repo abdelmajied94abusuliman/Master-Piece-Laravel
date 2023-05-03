@@ -24,7 +24,7 @@
                     <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">{{ __('Remember me') }}</span>
                 </label>
 
-                <button type="submit">Login</button>
+                <button type="submit" id="button-login">Login</button>
                 <p id="not-have-account" >Don't have an account? <a id="go-with-link" href="{{route('register')}}" >Sign up</a></p>
 
                 <div class="flex items-center justify-end mt-4">

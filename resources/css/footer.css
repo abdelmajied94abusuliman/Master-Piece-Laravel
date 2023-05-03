@@ -37,7 +37,7 @@
 }
 
 
-@media screen and (max-device-width:394px) {
+@media screen and (max-device-width:540px) {
     #footer-container {
         display: none;
     }

@@ -50,6 +50,41 @@
     display: none;
 }
 
+@media screen and (max-device-width: 1024px){
+    #header-navbar-middle-tabs {
+        width: 125%;
+    }
+}
+
+@media screen and (max-device-width: 912px){
+    #header-navbar-middle-tabs {
+        width: 140%;
+        margin-left: -55px;
+    }
+}
+
+@media screen and (max-device-width: 820px){
+    #header-navbar-middle-tabs {
+        width: 155%;
+        margin-left: -75px;
+    }
+}
+
+@media screen and (max-device-width: 540px){
+    #header-logo {
+        margin-left: 10%;
+        width: 30px;
+        height: 40px;
+    }
+    #header-navbar-users {
+        font-size: 11px;
+    }
+    #header-navbar-middle-tabs {
+        margin-left: -60px;
+        font-size: 11px;
+    }
+}
+
 @media screen and (max-device-width: 415px) {
     #header-navbar-container {
         display: none;

@@ -6,9 +6,8 @@
 
 section{
     background-color:  #F2F0EF;
-    height: 112vh;
+    min-height: 112vh;
     padding: 100px 150px;
-
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredoka+One&family=Open+Sans&display=swap');
@@ -120,4 +119,88 @@ section{
 #go-with-link:hover {
     text-decoration: underline;
     color: #000080;
+}
+
+
+
+@media screen and (max-width : 912px) {
+    section {
+        min-height: 60vh;
+    }
+    .container {
+        height: 50vh;
+    }
+}
+
+
+
+@media screen and (max-width : 768px) {
+    section {
+        min-height: 60vh;
+    }
+    .container {
+        height: 60vh;
+    }
+}
+@media screen and (max-width : 540px ) {
+    .container form input[type=email],input[type=password] {
+        width: 100%;
+        padding: 0px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .container h2 {
+        font-size: 1.5em;
+        font-weight: 700;
+        padding-left: 0px;
+    }
+    .container p,label {
+        font-size: 10px;
+    }
+    .container a {
+        font-size: 10px;
+    }
+    #button-login {
+        line-height: 2px;
+        width: 19vw;
+        height: 30px;
+        font-weight: 500;
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width : 415px ) {
+    .container {
+        width: 75vw !important;
+        margin-left: -90px !important;
+        height: 45vh !important;
+    }
+}
+
+
+@media screen and (max-width : 394px ) {
+    .container {
+        height: 50vh !important;
+    }
+}
+
+
+@media screen and (max-width : 376px ) {
+    .container {
+        height: 65vh !important;
+    }
+}
+
+
+@media screen and (max-width:281px) {
+    section{
+        padding: 100px 0px;
+    }
+    .container {
+        margin-left: 40px !important;
+    }
 }

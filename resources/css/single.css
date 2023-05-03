@@ -4,6 +4,12 @@
     gap: 2rem;
 }
 
+#headNameOfCompany {
+    font-size: 2.3rem;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
 .apartment-location {
     width: 30rem;
     height: 20.5rem;
@@ -20,6 +26,11 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding-right:10rem
+}
+
+#leftDetails {
+    border-right: 1px solid black;
 }
 
 #description {
@@ -51,6 +62,7 @@ ul {
     height: 5rem;
     text-align: center;
     cursor: pointer;
+    line-height: 15px;
 }
 
 #btn-owner a button {
@@ -61,7 +73,7 @@ ul {
 }
 
 #btn-owner p {
-    font-size: 13px;
+    font-size: 16px;
     color: aliceblue;
     font-weight: bold;
 }
@@ -97,4 +109,166 @@ ul {
 
 .up.show {
     right: 35px;
+}
+
+#ownerImage {
+    height:54vh ;
+    margin-left: -4vw;
+}
+
+
+
+@media screen and (max-width:912px) {
+    #headNameOfCompany {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    #container-gallary-and-location {
+        grid-template-columns: 1fr;
+    }
+    #sliderContainer {
+        margin-left: -12vw;
+    }
+    #ownerDetails {
+        margin-left: 25vw;
+    }
+    #ownerDetails p {
+        margin-left: 22vw !important;
+        font-size: 35px;
+    }
+    #ownerImage {
+        height:37vh;
+    }
+}
+
+
+
+@media screen and (max-width:541px) {
+    .slide > img {
+        height: 47% !important;
+    }
+    .slide {
+        position: absolute;
+        top: -90px !important;
+    }
+    .slider {
+        height: 14.625rem !important;
+    }
+    #sliderContainer {
+        margin-left: -19vw;
+    }
+    #ownerDetails p {
+        margin-left: 15vw !important;
+    }
+    .apartment-details {
+        padding-right: 1rem !important;
+    }
+    #description {
+        margin-left: 2rem;
+    }
+    #textDescription {
+        margin-left: -12vw;
+        max-width: 80vw !important;
+    }
+    #btn-owner {
+        margin-left: -12vw;
+    }
+    #btn-owner {
+        margin-left: -14vw;
+    }
+    #btn-owner {
+        font-size: smaller;
+        width: 15rem;
+        height: 3rem;
+        line-height: 10px;
+        margin-left: -7vw;
+    }
+    #staticSentence {
+        padding-top: 15px;
+        margin-bottom: 5px;
+        font-size: 10px !important;
+    }
+    #isLoginSentence {
+        font-size: 10px !important;
+    }
+    .apartment-details {
+        margin-left: 10px;
+    }
+}
+
+
+
+@media screen and (max-width : 415px) {
+    #sliderContainer {
+        margin-left: -23vw;
+    }
+    .slider {
+        margin-left: -23vw;
+    }
+    #ownerImage {
+        height: 26vh;
+    }
+    #textDescription {
+        margin-left: -17vw !important;
+    }
+}
+
+
+
+@media screen and (max-width : 394px) {
+    #sliderContainer {
+        margin-left: -25vw;
+    }
+    #container-details-in-single {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #leftDetails {
+        border-right: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 18px;
+    }
+    #btn-owner {
+        margin-left: -12vw;
+    }
+}
+
+
+
+@media screen and (max-width : 376px) {
+    #sliderContainer {
+        margin-left: -27vw;
+    }
+    #ownerImage {
+        margin-left: 6vw;
+    }
+}
+
+
+
+@media screen and (max-width : 361px) {
+    #description {
+        margin-left: 3vw;
+    }
+    #textDescription {
+        margin-left: -24vw;
+    }
+    #btn-owner {
+        margin-left: -19vw;
+    }
+    #ownerDetails p {
+        margin-left: 12vw !important;
+    }
+}
+
+
+
+@media screen and (max-width : 281px) {
+    #textDescription {
+        margin-left: -37vw;
+        font-size: smaller;
+    }
+    #btn-owner {
+        margin-left: -37vw;
+    }
 }

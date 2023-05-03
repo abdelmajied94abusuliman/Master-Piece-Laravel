@@ -24,7 +24,6 @@ body {
 
 .contact_bg h1 {
     font-size: 4.3rem;
-
 }
 
 .line div{
@@ -74,4 +73,18 @@ section{
 
  .up.show {
     right: 35px;
+ }
+
+ @media screen and (max-width : 280px) {
+    .contact_bg h1 {
+        font-size: 2rem;
+    }
+
+    #about_us_title {
+        font-size: 20px;
+    }
+
+    .about_us_text {
+        font-size: 12px;
+    }
  }

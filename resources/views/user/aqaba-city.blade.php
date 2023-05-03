@@ -49,6 +49,33 @@
         </div>
     </section>
 
+
+    <section class="the-sections-after-first">
+        <div class="container-image-and-text-hidden">
+            <iframe width="100%" height="303px" src="https://www.youtube.com/embed/pfKqBzHMYF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen muted autoplay></iframe>
+            <div class="container-of-text-and-info">
+                <p class="head-for-text">Diving and Snorkeling in Aqaba</p>
+                <p class="text-descrip-to-customer">Aqaba is world-famous for its top diving and snorkeling sites. Located on the coast of the Red Sea, Aqaba attracts divers from around the world that want to enjoy its gorgeous underwater world.</p>
+                <a href="https://aqaba-diving.com/" class="link-to-article" target="#_blank"><button class="btn">Book Now</button></a>
+            </div>
+        </div>
+        <div class="container-image-and-text-hidden">
+            <img src="{{URL::asset('storage/image/aqaba--970025-0.jpg')}}" class="image-realted-with-article" alt="woman-carry-key">
+            <div class="container-of-text-and-info">
+                <p class="head-for-text">Walk the Aqaba Beach Promenade</p>
+                <p class="text-descrip-to-customer">The Beach Promenade of Aqaba, known as the corniche should also be on your what to see in Aqaba, Jordan list. It’s the perfect place for long strolls along the sea and for people-watching.</p>
+                <a href="https://aqaba.jo/Pages/Gallary" class="link-to-article" target="#_blank"><button class="btn">See Some Photos</button></a>
+            </div>
+        </div>
+        <div class="container-image-and-text-hidden">
+            <img src="{{URL::asset('storage/image/things-to-do-in-aqaba-jordan-12.jpg')}}" class="image-realted-with-article" alt="woman-carry-key">
+            <div class="container-of-text-and-info">
+                <p class="head-for-text">A glass-bottom boat tour</p>
+                <p class="text-descrip-to-customer">The Corniche of Aqaba is also the place where most of the legendary glass-bottom boats depart. Apparently, they are an institution in Aqaba and it’s one of the most popular things to do in Aqaba.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="the-sections-after-first">
         <div style="margin-bottom: 50px;"></div>
     </section>

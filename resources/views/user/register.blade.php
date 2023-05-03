@@ -10,7 +10,7 @@
     <section>
         <div class="container">
             <h2>Register</h2>
-            <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('register') }}" id="form-container">
                 @csrf
 
                 <div id="table-form">
@@ -70,7 +70,6 @@
 
                     <button id="button-register" type="submit">Register</button>
                 </div>
-
             </form>
         </div>
     </section>

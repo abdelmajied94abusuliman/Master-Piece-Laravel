@@ -6,6 +6,7 @@ use App\Models\Item;
 use App\Models\User;
 use App\Models\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ItemController extends Controller
 {
@@ -38,12 +39,33 @@ class ItemController extends Controller
         return view('admin.sellItem' , ['data' => $rentReq]);
     }
 
+    public function userAdds(Request $request)
+    {
+        $user_id = $request->user()->id;
+        $seeUserAdds = Item::orderBy('created_at', 'desc')->where('user_id' , $user_id)->get();
+        $data = [];
+        foreach ( $seeUserAdds as $singleItem ){
+        $data[] = [
+            'id'=> $singleItem->id,
+            'location' => $singleItem->location,
+            'house_number' => $singleItem->house_number,
+            'street_name' => $singleItem->street_name,
+            'area' => $singleItem->area,
+            'price' => $singleItem->price,
+            'service' => $singleItem->service->name,
+            'frequency' => $singleItem->frequency,
+            'type' => $singleItem->type->name,
+            'created_at'=> $singleItem->created_at,
+            'status'=> $singleItem->status,
+        ];}
+        // dd($data);
+        return view('user.seeYourAds' , ['data' => $data]);
+    }
+
 
     public function singleItemDetails($id)
     {
         $singleItem = Item::findOrFail($id);
-        // $user = User::where('id' , $singleItem['user_id'])->get();
-        // dd($user);
 
         $data= [
             'id'=> $singleItem->id,
@@ -53,8 +75,6 @@ class ItemController extends Controller
             'street_name' => $singleItem->street_name,
             'is_furnished' => $singleItem->is_furnished,
             'description' => $singleItem->description,
-            'general_details' => $singleItem->general_details,
-            'added_features' => $singleItem->added_features,
             'beds' => $singleItem->beds,
             'baths' => $singleItem->baths,
             'area' => $singleItem->area,
@@ -99,6 +119,69 @@ class ItemController extends Controller
     {
         //
     }
+
+
+    public function seeYourItemDescription($id)
+    {
+        $itemDesc = Item::where('id', $id)->get();
+        $itemIMG = Image::where('item_id' , $id)->get();
+        // dd($itemIMG);
+        foreach ( $itemIMG as $singleData ){
+            $images[] = $singleData->image;
+        };
+        $userID = $itemDesc[0]->user_id;
+        $itemOwner = User::where('id' , $userID )->get();
+        $userIMG = $itemOwner[0]->image;
+        return view('user.seeYourItemDescription' , ['itemDesc' => $itemDesc , 'images'=> $images , 'userIMG'=>$userIMG]);
+    }
+
+
+    public function seeEditYourItemDescriptionForm($id)
+    {
+        $data = Item::findOrFail($id);
+        return view('user.editYourItemDescription' , ['data'=>$data]);
+    }
+
+
+    public function editYourItemDescription(Request $request , $id)
+    {
+
+        $Item = Item::where('id' , $id)->update([
+            'name'=>$request->input('name'),
+            'user_id'=>$request->user()->id,
+            'is_furnished'=>$request->input('is_furnished'),
+            'location'=>$request->input('Location'),
+            'service_id'=>$request->input('typeOfServices'),
+            'price'=>$request->input('Price'),
+            'type_id'=>$request->input('typeOfItem'),
+            'beds'=>$request->input('Beds'),
+            'baths'=>$request->input('Baths'),
+            'area'=>$request->input('Area'),
+            'frequency'=>$request->input('Frequency'),
+            'description'=>$request->input('description'),
+            'house_number'=>$request->input('house_number'),
+            'street_name'=>$request->input('street_name'),
+        ]);
+
+        $ImageItem = new Image;
+
+        if($request->file('images')){
+            foreach( $request->file('images') as $image){
+                $imageName = $image->getClientOriginalName();
+                // $image->move( public_path('image'), $imageName);
+                $image->storeAs('public/image', $imageName);
+
+                $newImage = Image::create([
+                    'image'=>$imageName,
+                    'item_id'=>$id,
+                ]);
+                $allImages [] = $imageName;
+            }
+        }
+
+        return redirect('/seeYourAdds');
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -157,7 +240,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        $allItems = Item::orderBy('created_at', 'desc')->where('status' , 'Accepted')->get();
+        $allItems = Item::orderBy('created_at', 'desc')->where('status' , 'Accepted')->paginate(4);
         $data = [];
         foreach ( $allItems as $singleData ){
             $data[] = [
@@ -179,9 +262,8 @@ class ItemController extends Controller
             ];
         };
 
-        // dd($data);
 
-        return view("user.services" , ['data' => $data]);
+        return view("user.services" , ['data' => $data , 'allItems'=>$allItems]);
     }
 
     /**
@@ -246,6 +328,12 @@ class ItemController extends Controller
     {
         Item::destroy($id);
         return redirect('/admin/sellOnSite');
+    }
+
+    public function destroy_my_req($id)
+    {
+        Item::destroy($id);
+        return redirect('/seeYourAdds');
     }
 
     public function seeDescription($id)

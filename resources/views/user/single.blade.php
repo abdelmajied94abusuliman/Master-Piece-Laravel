@@ -5,12 +5,14 @@
     Single Product
 @endsection
 
+{{Session::put('item_id' , $data['id'])}}
+
 
 @section('content')
 
-    <h1 style="font-size: 2.3rem;">{{$data['name_of_company']}}</h1>
+    <h1 id="headNameOfCompany">{{$data['name_of_company']}}</h1>
     <div id="container-gallary-and-location">
-        <div>
+        <div id="sliderContainer">
             <div class="slider">
                 @foreach ($data['images'] as $image)
                     <div class="slide">
@@ -27,16 +29,16 @@
             <span class="dot" data-slide="3"></span>
             </div>
         </div>
-        <div>
-            <p style="margin-left:7vw ; font-weight:bold">Owner</p>
+        <div id="ownerDetails">
+            <p style="margin-left:7vw ; font-weight:bold">Publisher Image</p>
             {{-- {{dd($data['ownerImage'])}} --}}
-            <img style="height:57vh ; margin:auto" src="{{URL::asset('storage/image/'.$data['ownerImage'])}}"  alt="">
+            <img id="ownerImage" src="{{URL::asset('storage/image/'.$data['ownerImage'])}}"  alt="">
         </div>
     </div>
 
 
     <div id="container-details-in-single">
-        <div class="apartment-details" style="border-right: 1px solid black; padding-right:10rem">
+        <div class="apartment-details" id="leftDetails">
             <p><strong> Location</strong> : {{$data['location']}}</p>
             <p><strong> House Num./Street</strong> : {{$data['house_number']}} - {{$data['street_name']}} Str.</p>
             @if($data['service'] == "Rent")
@@ -54,22 +56,24 @@
 
     <h2 id="description">Description :</h2>
     <div id="container-description">
-        <p style="max-width: 50vw">{{$data['description']}}.</p>
-        {{-- @if(!auth()->user()->is_admin) --}}
+        <p id="textDescription" style="max-width: 50vw">{{$data['description']}}.</p>
             <div id="general-and-contact-contaienr">
                 @if(auth()->check())
                     <div id="btn-owner">
-                        <a href="https://wa.me/{{$data['mobile']}}?text=I'am%20interessting%20to%20know%20more%20about%20your%20Add."><button>Contact With Owner</button></a>
-                        <p>{{$data['mobile']}}</p>
+                        <a id="staticSentence" target="_blank" href="https://wa.me/{{$data['mobile']}}?text=I'am%20interessting%20to%20know%20more%20about%20your%20Add."><button>Contact With Owner</button></a>
+                        <br>
+                        <br>
+                        <p id="isLoginSentence">{{$data['mobile']}}</p>
                     </div>
                 @else
-                    <div id="btn-owner">
-                        <a href='/login'><button>Contact With Owner</button></a>
-                        <p>Please Login To See The Contact's Information.</p>
-                    </div>
+                    <a href='/login' style="text-decoration: none ; ">
+                        <div id="btn-owner">
+                            <p id="staticSentence" style="padding-top: 15px;">Contact With Owner</p>
+                            <p id="isLoginSentence">Please Login To See The Contact's Information.</p>
+                        </div>
+                    </a>
                 @endif
             </div>
-        {{-- @endif --}}
     </div>
 
 

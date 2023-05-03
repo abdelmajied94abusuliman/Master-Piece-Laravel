@@ -14,7 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
+        return view('user.contact_us');
     }
 
     /**
@@ -22,9 +22,10 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function read()
     {
-        //
+        $messages = Contact::get();
+        return view('admin.messages' , ['messages'=>$messages]);
     }
 
     /**
@@ -35,7 +36,15 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contact = Contact::create([
+            'first_name'=>$request->fname,
+            'last_name'=>$request->lname,
+            'email'=>$request->email,
+            'phone'=>$request->phone,
+            'message'=>$request->message,
+        ]);
+        $request->session()->put('status', 'Form submitted successfully!');
+        return redirect('/contact_us');
     }
 
     /**
@@ -46,7 +55,8 @@ class ContactController extends Controller
      */
     public function show(Contact $contact)
     {
-        //
+        function () {session()->forget('status');};
+        return redirect('/contact_us');
     }
 
     /**

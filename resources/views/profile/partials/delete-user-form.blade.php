@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Profile</title>
 </head>
 <style>
         .contanerrrr{
@@ -123,7 +123,7 @@
 
     <div class="delet">
         <x-danger-button onclick="showConfirm()"  x-data="" x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')" class="buttdelet">
-            {{ __('Delete Account') }}
+            {{ __('Delete') }}
         </x-danger-button>
     </div>
         <div name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>

@@ -15,7 +15,11 @@
                 <p id="second-line-intro">THAT’S PERFECT FOR YOU.</p>
             </div>
             <div id="container-icon-and-search">
-                <span><button id="button-for-search"><i class="fa-solid fa-magnifying-glass"></i></button><input type="text" placeholder="Search" id="search-bar"></span>
+                <span><form action="{{ route('search') }}" method="get" class="div-bar">
+                        <button id="button-for-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        @csrf
+                        <input type="text" name="search" class="search" id="search-bar" placeholder="Search...">
+                    </form></span>
             </div>
         </div>
     </section>
@@ -71,10 +75,10 @@
                 <p class="text-descrip-to-customer">If you’re on the fence about whether you should rent or buy, read on to find out what you need to consider before taking the plunge.</p>
                 <a href="https://www.quickenloans.com/learn/renting-vs-buying-a-house" class="link-to-article" target="#_blank">Browse Articles</a>
             </div>
-            <img src="{{URL::asset('storage/image/RentBuy.png')}}" class="image-realted-with-article" alt="woman-carry-key">
+            <img src="{{URL::asset('storage/image/RentBuy.png')}}" class="image-realted-with-article" alt="rent-vs-buy">
         </div>
         <div class="container-image-and-text">
-            <img src="{{URL::asset('storage/image/widget_take_us_with_you_469.png')}}" class="image-realted-with-article" alt="woman-carry-key">
+            <img src="{{URL::asset('storage/image/widget_take_us_with_you_469.png')}}" class="image-realted-with-article" alt="mobile-app-comming-soon">
             <div class="container-of-text-and-info">
                 <p class="head-for-text">Take Us With You - Future Plan</p>
                 <p class="text-descrip-to-customer">Keep HomeWebsite.com in the palm of your hand throughout your rental journey.</p>
@@ -85,7 +89,7 @@
 
     <section class="the-sections-after-first">
         <div class="container-image-and-text-hidden">
-            <img src="./IMG/Tips-for-Tenants-to-Find-a-Home-1-e1633435718207.jpg" class="image-realted-with-article" alt="woman-carry-key">
+            <img src="{{URL::asset('storage/image/Tips-for-Tenants-to-Find-a-Home-1-e1633435718207.jpg')}}" class="image-realted-with-article" alt="woman-carry-key">
             <div class="container-of-text-and-info">
                 <p class="head-for-text">Tips for Renters</p>
                 <p class="text-descrip-to-customer">Find answers to all of your renting questions with the best renter’s guide in the galaxy.</p>
@@ -93,7 +97,7 @@
             </div>
         </div>
         <div class="container-image-and-text-hidden">
-            <img src="./IMG/RentBuy.png" class="image-realted-with-article" alt="woman-carry-key">
+            <img src="{{URL::asset('storage/image/RentBuy.png')}}" class="image-realted-with-article" alt="rent-vs-buy">
             <div class="container-of-text-and-info">
                 <p class="head-for-text">Rent Vs. Buy: How To Decide In 5 Steps</p>
                 <p class="text-descrip-to-customer">If you’re on the fence about whether you should rent or buy, read on to find out what you need to consider before taking the plunge.</p>
@@ -101,7 +105,7 @@
             </div>
         </div>
         <div class="container-image-and-text-hidden">
-            <img src="./IMG/widget_take_us_with_you_469.png" class="image-realted-with-article" alt="woman-carry-key">
+            <img src="{{URL::asset('storage/image/widget_take_us_with_you_469.png')}}" class="image-realted-with-article" alt="mobile-app-comming-soon">
             <div class="container-of-text-and-info">
                 <p class="head-for-text">Take Us With You - Future Plan</p>
                 <p class="text-descrip-to-customer">Keep HomeWebsite.com in the palm of your hand throughout your rental journey.</p>
@@ -114,7 +118,7 @@
         <div style="margin-bottom: 50px;"></div>
     </section>
 
-    <span class="up"> <i class="fa-solid fa-up-long"></i></span>
+    <span class="up"><i class="fa-solid fa-up-long"></i></span>
 
     <script src="./js/home.js"></script>
 

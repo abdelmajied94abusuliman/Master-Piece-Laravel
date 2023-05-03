@@ -7,8 +7,6 @@ body {
 
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
-    /* position: fixed; */
-    /* z-index: -1; */
     right: 0;
     bottom: 0;
     width: 100%;
@@ -74,6 +72,10 @@ section{
     height: 19.75vw;
 }
 
+.container-image-and-text-hidden {
+    display: none;
+}
+
 .link-to-article {
     color: yellow;
 }
@@ -117,4 +119,125 @@ section{
 
 .up.show {
     right: 35px;
+}
+
+
+
+
+
+@media screen and (max-device-width: 1280px){
+    #myVideo {
+        min-height: 90%;
+    }
+
+    .container-of-text-and-info {
+        height: 23.7vw;
+    }
+}
+
+
+@media screen and (max-device-width: 1024px){
+    .container-of-text-and-info {
+        height: 29.6vw;
+        padding: 35px;
+    }
+
+    .btn {
+        width: 17vw !important;
+    }
+}
+
+
+@media screen and (max-device-width: 912px){
+
+    #myVideo {
+        min-height: 35%;
+    }
+    .container-of-text-and-info {
+        height: 29.6vw;
+        padding: 35px;
+    }
+    .btn {
+        width: 17vw !important;
+    }
+    .head-for-text {
+        font-size: 20px;
+    }
+    .container-of-text-and-info {
+        height: 33.2vw;
+    }
+}
+
+@media screen and (max-device-width: 820px){
+    .container-image-and-text {
+        display: none;
+    }
+    .container-image-and-text-hidden {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 85%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-device-width: 540px){
+    p {
+        font-size: 11px;
+    }
+    .title-of-section p {
+        font-size: 35px !important;
+    }
+    .btn {
+        width: 35vw !important;
+    }
+    .container-of-text-and-info {
+        height: 38vw;
+    }
+    .about_us_text {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-device-width: 415px){
+    #myVideo {
+        min-height: 25%;
+    }
+    .container-of-text-and-info {
+        height: 65vw;
+    }
+    .btn {
+        width: 40vw !important;
+    }
+}
+
+@media screen and (max-device-width: 361px){
+    .container-of-text-and-info {
+        height: 75vw;
+    }
+    .btn {
+        width: 45vw !important;
+    }
+}
+
+@media screen and (max-device-width: 280px){
+    #myVideo {
+        min-height: 23%;
+    }
+    #about_us_title {
+        font-size: 30px;
+    }
+    .title-of-section p {
+        font-size: 25px !important;
+    }
+    .head-for-text {
+        font-size: 15px;
+    }
+    .container-of-text-and-info {
+        height: 110vw;
+    }
+    .btn {
+        font-size: 14px !important;
+        width: 50vw !important;
+    }
+
 }

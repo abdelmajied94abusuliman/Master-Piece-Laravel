@@ -42,7 +42,9 @@ body {
 #container-icon-and-search {
     text-align: center;
     align-items: center;
-    margin-left: 5.0rem;
+    margin-left: 9.5rem;
+    display: flex;
+    width: 15vw;
 }
 
 #container-filter-apartment select {
@@ -60,16 +62,15 @@ body {
     height: 5vh;
     width: 6vw;
     align-items: center;
-    padding-top: 2.5px;
-    margin-left: 4.7vw;
+    padding-top: 2px;
+    /* margin-left: 4.7vw; */
 }
 
 #search-bar{
     border: 2px solid rgb(192, 192, 192);
-    border-left: none;
+    /* border-left: none; */
     height: 4.9vh;
     width: 30vw ;
-    /* padding-bottom: 1.5px; */
 }
 
 input:focus{
@@ -86,6 +87,7 @@ input:focus{
 #container-for-select-filter select {
     margin-left: 1.25rem;
     width: 9.7rem;
+    height: 4.9vh;
 }
 
 #filter {
@@ -97,6 +99,7 @@ input:focus{
     background-color: rgb(233, 171, 0);
     border: 1px solid #000080;
     cursor: pointer;
+    height: 4.9vh;
 }
 
 #filter:hover {
@@ -148,4 +151,258 @@ input:focus{
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+#explore-btn {
+    cursor: pointer ;
+    margin-left: 3vw ;
+    margin-top: 1vw ;
+    height : 2vw;
+    background-color: #0000bb;
+    border-radius: 4px;
+    color: aliceblue;
+    border: none;
+}
+
+#explore-btn:hover {
+    background-color: #000080;
+}
+
+#imageForSmallScreens {
+    display: none;
+}
+
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+.pagination span span .bg-white {
+    background-color: #000080 !important;
+    color: gold;
+}
+.pagination {
+    margin-bottom: 5vw;
+    margin-top: 5vw;
+
+}
+.pagination a {
+    text-decoration: none;
+}
+.pagination .w-5 {
+    width : 15px
+}
+.pagination p {
+    display: none;
+}
+.pagination nav > :first-child {
+    display: none;
+}
+
+
+
+
+@media screen and (max-width:1280px) {
+    #search-bar{
+        width: 20vw ;
+    }
+    #container-for-select-filter select {
+        margin-left: 1.25rem;
+        width: 11vw;
+    }
+    #explore-btn {
+        margin-top: 3.5vw ;
+    }
+    #typeOfService {
+        width: 15vw;
+    }
+    .div-bar {
+        margin-left: -3vw;
+    }
+}
+
+
+
+@media screen and (max-width:1024px) {
+    #typeOfService {
+        margin-left: 9vw;
+        width: 15vw;
+    }
+    .div-bar {
+        margin-left: -9vw;
+    }
+    #container-for-select-filter select {
+        margin-left: 1.25rem;
+        width: 11vw;
+    }
+    #explore-btn {
+        margin-top: 7vw ;
+        height : 4vw;
+        padding: 10px;
+    }
+}
+
+
+
+@media screen and (max-width:913px) {
+    #typeOfService {
+        margin-left: 11vw;
+        width: 15vw;
+    }
+    .div-bar {
+        margin-left: -12vw;
+    }
+    #explore-btn {
+        margin-top: 11vw ;
+    }
+}
+
+
+
+@media screen and (max-width:821px) {
+    #typeOfService {
+        margin-left: 11vw;
+        width: 15vw;
+    }
+    .div-bar {
+        margin-left: -15vw;
+    }
+}
+
+
+
+@media screen and (max-width:769px) {
+    #explore-btn {
+        height : 9vw;
+    }
+    #typeOfService {
+        margin-left: 11vw;
+        width: 15vw;
+    }
+    .div-bar {
+        margin-left: -16vw;
+    }
+}
+
+
+
+@media screen and (max-width:541px) {
+    #typeOfService {
+        margin-left: -14vw;
+        width: 22vw;
+        height: 5vw;
+    }
+    .div-bar {
+        margin-left: 13vw;
+    }
+    #container-filter-apartment {
+        display: block;
+    }
+    #search-bar {
+        width: 40vw;
+        height: 5vw;
+    }
+    #container-for-select-filter {
+        display: flex;
+        justify-content: center;
+        margin-left: 18vw;
+    }
+    #container-for-select-filter select {
+        margin-left: 1vw;
+        width: 25vw;
+    }
+    .apartment-img {
+        width: 80vw;
+    }
+    #container-apartmnet-and-location, #container-apartment-pic-and-description {
+        padding-left: 4.5vw;
+        display: block;
+    }
+    #container-details-of-apartment {
+        padding-left: 3vw;
+    }
+    #imageForNormalScreens {
+        display: none;
+    }
+    #imageForSmallScreens {
+        display: block;
+        margin-left: 8vw;
+    }
+    #explore-btn {
+        margin-top: 4vw ;
+        margin-left: 25vw;
+    }
+    #container-icon-and-search {
+        margin-left: 0rem;
+    }
+}
+
+
+
+@media screen and (max-width:394px) {
+    #typeOfService {
+        height: 6vw;
+    }
+    #search-bar {
+        height: 6vw;
+    }
+    #container-for-select-filter {
+        margin-left: 13vw;
+    }
+    #container-for-select-filter select {
+        font-size: smaller;
+    }
+    #explore-btn {
+        padding: 5px 5px;
+        margin-left: 20vw;
+    }
+}
+
+
+
+@media screen and (max-width:361px) {
+    #container-for-select-filter select {
+        font-size: 10px;
+    }
+    #typeOfService {
+        font-size: 10px !important;
+    }
+    #search-bar{
+        font-size: 10px;
+        height: 3.2vh;
+        width: 30vw ;
+    }
+}
+
+
+
+@media screen and (max-width:281px) {
+    #rooms, #price, #furnished {
+        width: 55.5vw !important;
+        margin-bottom: 4px;
+    }
+    #container-for-select-filter {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 21vw;
+    }
+    #filter {
+        width: 55.5vw !important;
+        font-size: 12px;
+        margin-left: 3px;
+    }
+    #typeOfService {
+        height: 3vh;
+        padding-bottom: 5px;
+    }
+    #search-bar{
+        height: 3vh;
+    }
+    #explore-btn {
+        font-size: 12px;
+        margin-left: 15vw;
+    }
 }

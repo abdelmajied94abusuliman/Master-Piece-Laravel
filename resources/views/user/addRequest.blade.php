@@ -1,4 +1,4 @@
-@vite('resources/css/register.css')
+@vite('resources/css/addAds.css')
 @extends('layouts.masterPage')
 
 @section('title')
@@ -71,9 +71,9 @@
                         </select>
                     </div>
 
-                    <div style="margin-left: 4vw ; padding-top: 1vw ">
+                    <div style="margin-left: 2.6vw ; padding-top: 1vw ">
                         <div><label>Number Of Baths <span style="color: red">*</span></label></div>
-                        <select name="Baths" id="Baths" style="width : 9vw ; height : 3vh">
+                        <select name="Baths" id="Baths" style="width : 9.5vw ; height : 3vh">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -81,9 +81,9 @@
                         </select>
                     </div>
 
-                    <div style="margin-left:4vw ; padding-top: 1vw ">
+                    <div style="margin-left:2.6vw ; padding-top: 1vw ">
                         <div><label>Area <span style="color: red">*</span></label></div>
-                        <div><input style="width : 7.5vw ; height : 3vh" id="Area" class="block mt-1 w-full" name="Area" ></div>
+                        <div><input style="width : 7.5vw ; height : 3vh" id="Area" class="block w-full" name="Area" ></div>
                     </div>
                 </div>
 
@@ -115,7 +115,7 @@
                 <div id="table-form">
                     <div style="padding-top: 1vw"><label>Description <span style="color: red">*</span></label></div>
                     <div>
-                        <textarea placeholder="Descripe your Apartment/House." type="text" name="description" style="width : 33.5vw ; height : 10vh ; padding-top : 1vw"></textarea>
+                        <textarea placeholder="Descripe your Apartment/House." type="text" name="description" style="width : 31.5vw ; height : 10vh ; padding-top : 1vw"></textarea>
                     </div>
                 </div>
                 <div id="table-form">

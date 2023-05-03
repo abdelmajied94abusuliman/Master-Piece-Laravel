@@ -17,9 +17,9 @@
             </div>
         </div>
         <div class="navbar-nav w-100">
-            <a href="/admin/index" class="nav-item nav-link @yield('Dashboard')"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+            <a href="{{route('admin.indexx')}}" class="nav-item nav-link @yield('Dashboard')"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle @yield('Items')" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Items</a>
+                <a href="#" class="nav-link dropdown-toggle @yield('Items')" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Advertisements</a>
                 <div class="dropdown-menu bg-transparent border-0">
                     <a href="/admin/rentOnSite" class="dropdown-item @yield('Items-Rent')">Rent</a>
                     <a href="/admin/sellOnSite" class="dropdown-item @yield('Items-Sell')">Sell</a>
@@ -34,6 +34,7 @@
             </div>
             <a href="/admin/admins" class="nav-item nav-link @yield('Admins')"><i class="fa fa-table me-2"></i>Admins</a>
             <a href="/admin/users" class="nav-item nav-link @yield('Users')"><i class="fa fa-chart-bar me-2"></i>Users</a>
+            <a href="/admin/messages" class="nav-item nav-link @yield('Msg')"><i class="fa-solid fa-envelope"></i>Messages</a>
         </div>
     </nav>
 </div>

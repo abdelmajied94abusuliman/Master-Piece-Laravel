@@ -12,37 +12,44 @@
 
 </head>
 <body>
-    <form action={{route('filter-items')}} method="">
-        <div id="container-filter-apartment">
-            <div id="container-icon-and-search">
-                <div class="div-bar" id="ss"><select name="typeOfService" id="typeOfService">
-                    <option value="Rent" selected>Rent</option>
-                    <option value="Buy">Buy</option>
-                </select></div><div class="div-bar"><input type="text" placeholder="Search" id="search-bar"></div>
-            </div>
-            <div id="container-for-select-filter">
-                <select name="beds" id="rooms">
-                    <option value="0" selected>All Options</option>
-                    <option value="1">One Bed</option>
-                    <option value="2">Two Beds</option>
-                    <option value="3">Three Beds +</option>
-                </select>
-                <select name="price" id="price">
-                    <option value="0" selected>All Prices</option>
-                    <option value="1">0-100</option>
-                    <option value="100">100-400</option>
-                    <option value="400">400-700</option>
-                    <option value="700">700+</option>
-                </select>
-                <select name="furnished" id="furnished">
-                    <option value="AllApartments" selected>All Apartments</option>
-                    <option value="furnished">Furnished</option>
-                    <option value="not-furnished">Not Furnished</option>
-                </select>
-                <button type="submit" id="filter">Filter</button>
-            </div>
-        </div>
-    </form>
+    <div id="container-filter-apartment">
+        <div id="container-icon-and-search">
+            <form action="{{ route('search') }}" method="post" class="div-bar">
+                @csrf
+                <input type="text" name="search" class="search" id="search-bar" placeholder="Search...">
+            </form>
+            <form action={{route('filter-items')}} method="">
+                <div class="div-bar" id="ss">
+                    <select name="typeOfService" id="typeOfService" style="font-size: 14px;">
+                        <option value="All" {{$ServiceFilter == 'All' ? 'selected' : ''}}>All Service</option>
+                        <option value="Rent" {{$ServiceFilter == 'Rent' ? 'selected' : ''}}>Rent</option>
+                        <option value="Buy" {{$ServiceFilter == 'Buy' ? 'selected' : ''}}>Buy</option>
+                    </select>
+                </div>
+                </div>
+                <div id="container-for-select-filter">
+                    <select name="beds" id="rooms">
+                        <option value="0" {{$BedsFilter == '0' ? 'selected' : ''}}>All Options</option>
+                        <option value="1" {{$BedsFilter == '1' ? 'selected' : ''}}>One Bed</option>
+                        <option value="2" {{$BedsFilter == '2' ? 'selected' : ''}}>Two Beds</option>
+                        <option value="3" {{$BedsFilter == '3' ? 'selected' : ''}}>Three Beds +</option>
+                    </select>
+                    <select name="price" id="price">
+                        <option value="0" >All Prices</option>
+                        <option value="1" {{$PriceFilter == '1' ? 'selected' : ''}}>0-100</option>
+                        <option value="100" {{$PriceFilter == '100' ? 'selected' : ''}}>100-400</option>
+                        <option value="400" {{$PriceFilter == '400' ? 'selected' : ''}}>400-700</option>
+                        <option value="700" {{$PriceFilter == '700' ? 'selected' : ''}}>700+</option>
+                    </select>
+                    <select name="furnished" id="furnished">
+                        <option value="AllApartments" {{$FurnishedFilter == 'AllApartments' ? 'selected' : ''}}>All Apartments</option>
+                        <option value="furnished"{{$FurnishedFilter == 'furnished' ? 'selected' : ''}}>Furnished</option>
+                        <option value="not-furnished" {{$FurnishedFilter == 'not-furnished' ? 'selected' : ''}}>Not Furnished</option>
+                    </select>
+                    <button type="submit" id="filter">Filter</button>
+                    </div>
+                </div>
+        </form>
 
     @foreach ($data as $item)
         <div id="container-apartmnet-and-location">
@@ -76,7 +83,7 @@
                 </div>
             </div>
             </a>
-            <div>
+            <div id="imageForNormalScreens">
                 <?php $i = 0?>
                 @foreach ($item['images'] as $image)
                     @if ($i < 4)
@@ -89,11 +96,27 @@
                     <?php $i++ ?>
                 @endforeach
                 <br>
-                <a style="cursor: pointer" href={{route('singleItem' , ['item_id' => $item['id']])}}><button style="cursor: pointer ;margin-left: 3vw ; margin-top: 1vw ; height : 2vw">Explore This {{$item['type']}}</button></a>
+                <a style="cursor: pointer" href={{route('singleItem' , ['item_id' => $item['id']])}}><button id="explore-btn">Explore This {{$item['type']}}</button></a>
+            </div>
+
+            <div id="imageForSmallScreens">
+                <?php $i = 0?>
+                @foreach ($item['images'] as $image)
+                    @if ($i < 4)
+                        <img style="width : 20vw ; height : 15vw" src="{{URL::asset('storage/image/'.$image['image'])}}" alt="location-of-apartment" class="apartment-location">
+                    @endif
+                    <?php $i++ ?>
+                @endforeach
+                <br>
+                <a style="cursor: pointer" href={{route('singleItem' , ['item_id' => $item['id']])}}><button id="explore-btn">Explore This {{$item['type']}}</button></a>
             </div>
         </div>
         <hr>
     @endforeach
+
+    <div class="pagination">
+        {{ $allItems->appends(['typeOfService'=>$ServiceFilter , 'beds'=>$BedsFilter , 'price'=>$PriceFilter , 'furnished'=>$FurnishedFilter])->links() }}
+    </div>
 
     <span class="up"> <i class="fa-solid fa-up-long"></i></span>
 

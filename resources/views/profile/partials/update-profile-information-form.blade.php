@@ -1,13 +1,11 @@
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Profile</title>
 </head>
 
     <style>
@@ -120,7 +118,7 @@
     <div class="contanerr ">
      <section style="padding-top: 10px;">
 
-         <header style="display: flex; flex-direction : column ; height: 53vh; margin-left : 25vw ; padding-top : 2vh" >
+         <header id="changeProfilePicture" style="display: flex; flex-direction : column ; height: 53vh; margin-left : 25vw ; padding-top : 2vh" >
                 <div class="header1">
                     @if (auth()->user()->image == null)
                         <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png" id="profile-img" style="display: block ; width : 15vw ; height : 15vw">
@@ -140,7 +138,7 @@
                             <button type="submit" id="btnUpdatePhoto">Update Photo</button>
                         </form>
                         <br><br>
-                        <a href="/#"><button style="margin-left: 2vw ; margin-bottom: 1vw ; width : 20vw ; font-size : 14px ; height : 5vh" >
+                        <a href="/seeYourAdds" id="SeeYourItems"><button style="margin-left: 2vw ; margin-bottom: 1vw ; width : 20vw ; font-size : 14px ; height : 5vh" >
                             See Your Items
                         </button></a>
                         <a href="/add-your-adv-for-your-item"><button style="margin-left: 2vw ; width : 20vw ; font-size : 14px ; height : 5vh" >
@@ -152,9 +150,9 @@
 
 
 
-        <section style="display: flex ; justify-content : center">
+        <section id="headerProfile" style="display: flex ; justify-content : center">
 
-                <div style="margin-left: 5vw ; width:30vw">
+                <div id="ProfileInformation" style="margin-left: 5vw ; width:30vw">
                     <h1 class="text-lg font-medium text-gray-900 dark:text-gray-100" style="font-size: 40px"> {{-- <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100"> --}}    {{ __('Profile Information ') }}
                     {{-- </h2> --}} </h1>
 
@@ -164,7 +162,7 @@
                 @csrf
                 @method('patch')
 
-                  <div class="Name_Email" style="display: inline-block">
+                  <div id="inputsProfileInfo" class="Name_Email" style="display: inline-block">
 
                       <div class="Name_Email1" style="display: inline-block">
                           <x-input-label  class="name" for="name" :value="__('Name')" />

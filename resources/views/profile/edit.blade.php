@@ -1,6 +1,10 @@
 @extends('layouts.masterPage')
 
-@vite(['resources/css/home.css' , 'resources/js/home.js'])
+@vite(['resources/css/home.css' , 'resources/js/home.js' , 'resources/css/profile.css'])
+
+@section('title')
+    Profile
+@endsection
 
 @section('content')
     <div class="py-12">
@@ -9,7 +13,7 @@
 
             </div>
 
-            <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg" style="margin-top: 5vh">
+            <div id="editMarginForSmallScr" class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg" style="margin-top: 5vh">
                 <div class="max-w-xl">
                     @include('profile.partials.update-profile-information-form')
                 </div>

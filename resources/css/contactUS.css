@@ -23,7 +23,6 @@ body {
 
 .contact_bg h1 {
     font-size: 4.3rem;
-
 }
 
 .line div{
@@ -89,6 +88,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
 }
+
 .contact_info span {
  display: block;
 }
@@ -202,4 +202,42 @@ body {
 
 .up.show {
     right: 35px;
+}
+
+
+
+@media screen and (max-width:415px) {
+
+    .contact_bg h1 {
+        font-size: 3rem;
+    }
+    .contact_info {
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+
+    .contact_form {
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+
+    .contact_form div img {
+        width:100%;
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width:281px) {
+
+    .contact_bg h1 {
+        font-size: 2rem;
+    }
+
+    .contact_info div {
+        padding: 0px;
+    }
+
+    .up {
+        display: none;
+    }
 }

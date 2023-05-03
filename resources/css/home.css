@@ -59,12 +59,12 @@ section{
 
 #button-for-search {
     border: none;
-    height: 41px;
+    height: 40px;
     width: 70px;
     color: aliceblue;
     background-color: rgb(197, 145, 0);
     font-size: 15px;
-
+    padding-top: 3px;
 }
 
 #button-for-search:hover{
@@ -72,6 +72,7 @@ section{
 }
 
 #search-bar{
+    margin: -11px;
     border: 2px solid rgb(255, 255, 255);
     border-left: none;
     height: 40px;
@@ -348,7 +349,6 @@ figure {
     }
 
     .container-of-text-and-info {
-        height: 233px;
         padding-top: 20px;
     }
 
@@ -424,8 +424,12 @@ figure {
 
 
 @media screen and (max-device-width: 415px){
+    .up{
+        display: none;
+    }
     #search-bar {
         font-size: 11px;
+        height: 30px;
     }
     #button-for-search {
         height: 29.6px;
