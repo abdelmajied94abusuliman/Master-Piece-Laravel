@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $items = Item::orderBy('created_at', 'desc')->where('status' , 'Accepted')->take(4)->get();
+        $items = Item::inRandomOrder()->where('status' , 'Accepted')->take(4)->get();
 
         $data = [];
         foreach ( $items as $singleData ){

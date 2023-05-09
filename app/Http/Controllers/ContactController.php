@@ -24,7 +24,7 @@ class ContactController extends Controller
      */
     public function read()
     {
-        $messages = Contact::get();
+        $messages = Contact::Orderby('created_at' , 'DESC')->get();
         return view('admin.messages' , ['messages'=>$messages]);
     }
 

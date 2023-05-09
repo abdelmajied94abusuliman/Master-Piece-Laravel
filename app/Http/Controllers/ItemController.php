@@ -90,7 +90,7 @@ class ItemController extends Controller
 
         // dd($data);
 
-        $itemsSuggested = Item::inRandomOrder()->where('status' , 'Accepted')->where('name' , $data['name_of_company'])->take(4)->get();
+        $itemsSuggested = Item::inRandomOrder()->where('status' , 'Accepted')->where('service_id' , $singleItem->service_id)->take(4)->get();
 
         $Suggested = [];
         foreach ( $itemsSuggested as $singleData ){

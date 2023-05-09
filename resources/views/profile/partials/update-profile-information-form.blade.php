@@ -138,10 +138,10 @@
                             <button type="submit" id="btnUpdatePhoto">Update Photo</button>
                         </form>
                         <br><br>
-                        <a href="/seeYourAdds" id="SeeYourItems"><button style="margin-left: 2vw ; margin-bottom: 1vw ; width : 20vw ; font-size : 14px ; height : 5vh" >
+                        <a href="/seeYourAdds" id="SeeYourItems"><button class="btn btn-secondary" style="margin-left: 2vw ; margin-bottom: 1vw ; width : 20vw ; font-size : 14px ; height : 5vh" >
                             See Your Items
                         </button></a>
-                        <a href="/add-your-adv-for-your-item"><button style="margin-left: 2vw ; width : 20vw ; font-size : 14px ; height : 5vh" >
+                        <a href="/add-your-adv-for-your-item"><button class="btn btn-primary" style="margin-left: 2vw ; width : 20vw ; font-size : 14px ; height : 5vh" >
                             Add New Item
                         </button></a>
                     </main>

@@ -18,7 +18,7 @@
                     <div class="bg-secondary rounded h-100 p-4" style="background-color: #fff !important; ">
                         <div style="margin-bottom: 5vh">
                             <h5 class="mb-4" style="display: inline-block">Admin's Table</h5>
-                            <a href="{{route('admin.create')}}" style="margin-left : 41vw"><button>Add New Admin</button></a>
+                            <a href="{{route('admin.create')}}" style="margin-left : 41vw"><button class="btn btn-warning">Add New Admin</button></a>
                         </div>
                         <div class="table-responsive">
                             <table class="table">
