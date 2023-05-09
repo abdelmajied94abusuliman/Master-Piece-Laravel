@@ -7,6 +7,18 @@ body {
 
 
 
+
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+
+
+
+
+
+
+
 .up {
     position: fixed;
     bottom: 100px;
@@ -33,6 +45,28 @@ body {
 
 
 
+
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+
+
+
+
+
+/*                  START FILTER APARTMENT                           */
+/*                  START FILTER APARTMENT                           */
+/*                  START FILTER APARTMENT                           */
+/*                  START FILTER APARTMENT                           */
+
+
+
+
+
+/* Search And Filter Header */
+
+
 #container-filter-apartment {
     display: flex;
     justify-content: space-between;
@@ -47,6 +81,24 @@ body {
     width: 15vw;
 }
 
+
+/* Search Bar */
+
+
+.div-bar {
+    display: inline-block;
+}
+
+#search-bar{
+    border: 2px solid rgb(192, 192, 192);
+    height: 4.9vh;
+    width: 30vw ;
+}
+
+input:focus{
+    outline: none;
+}
+
 #container-filter-apartment select {
     background-color: #F0ECEC;
     text-align: center;
@@ -54,27 +106,15 @@ body {
     font-weight: bold;
 }
 
-.div-bar {
-    display: inline-block;
-}
+
+/* Select And Filters */
+
 
 #typeOfService {
     height: 5vh;
     width: 6vw;
     align-items: center;
     padding-top: 2px;
-    /* margin-left: 4.7vw; */
-}
-
-#search-bar{
-    border: 2px solid rgb(192, 192, 192);
-    /* border-left: none; */
-    height: 4.9vh;
-    width: 30vw ;
-}
-
-input:focus{
-    outline: none;
 }
 
 #container-for-select-filter {
@@ -110,6 +150,12 @@ input:focus{
     margin-right: 3.0rem;
 }
 
+
+
+/* Data Fetching */
+
+
+
 #container-apartmnet-and-location {
     margin-top: 1.25rem;
     display: flex;
@@ -122,27 +168,17 @@ input:focus{
     justify-content: center;
 }
 
-#container-details-of-apartment {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* margin-top: 25px; */
-}
-
-#container-icons-details {
-    display: flex;
-    justify-content: space-between;
-}
-
 .apartment-img {
     width: 18rem;
     height: 18rem;
     margin-right: 1.25rem;
 }
 
-.apartment-location {
-    width: 35rem;
-    height: 18rem;
+#container-details-of-apartment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin-top: 25px; */
 }
 
 #short-description {
@@ -151,6 +187,16 @@ input:focus{
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+#container-icons-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.apartment-location {
+    width: 35rem;
+    height: 18rem;
 }
 
 #explore-btn {
@@ -171,6 +217,23 @@ input:focus{
 #imageForSmallScreens {
     display: none;
 }
+
+
+
+
+/*                  END FILTER APARTMENT                            */
+/*                  END FILTER APARTMENT                            */
+/*                  END FILTER APARTMENT                            */
+/*                  END FILTER APARTMENT                            */
+
+
+
+
+
+/*                  START PAGINATION                           */
+/*                  START PAGINATION                           */
+/*                  START PAGINATION                           */
+/*                  START PAGINATION                           */
 
 
 
@@ -200,6 +263,24 @@ input:focus{
 .pagination nav > :first-child {
     display: none;
 }
+
+
+
+
+/*                  END PAGINATION                           */
+/*                  END PAGINATION                           */
+/*                  END PAGINATION                           */
+/*                  END PAGINATION                           */
+
+
+
+
+
+/*                  START RESPONSIVE                           */
+/*                  START RESPONSIVE                           */
+/*                  START RESPONSIVE                           */
+/*                  START RESPONSIVE                           */
+
 
 
 
@@ -337,6 +418,9 @@ input:focus{
     #container-icon-and-search {
         margin-left: 0rem;
     }
+    #nameOfAdv {
+        width: 15rem !important;
+    }
 }
 
 
@@ -347,6 +431,7 @@ input:focus{
     }
     #search-bar {
         height: 6vw;
+        margin-left: inherit;
     }
     #container-for-select-filter {
         margin-left: 13vw;

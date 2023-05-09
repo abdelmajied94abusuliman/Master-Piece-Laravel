@@ -1,19 +1,13 @@
-#container-gallary-and-location {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 2rem;
-}
-
 #headNameOfCompany {
     font-size: 2.3rem;
     margin-top: 10vh;
     margin-bottom: 10vh;
 }
 
-.apartment-location {
-    width: 30rem;
-    height: 20.5rem;
-    margin-right: 6rem;
+#container-gallary-and-location {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
 }
 
 #container-details-in-single {
@@ -45,10 +39,6 @@
 
 #container-description p {
     padding-bottom: 3px;
-}
-
-ul {
-    margin-left: 4rem;
 }
 
 #general-and-contact-contaienr {
@@ -86,6 +76,19 @@ ul {
 
 
 
+/*                  END GENERAL STYLE                           */
+/*                  END GENERAL STYLE                           */
+/*                  END GENERAL STYLE                           */
+/*                  END GENERAL STYLE                           */
+
+
+
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+
+
 
 
 .up {
@@ -115,6 +118,22 @@ ul {
     height:54vh ;
     margin-left: -4vw;
 }
+
+
+
+
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+
+
+
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+
 
 
 

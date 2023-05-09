@@ -65,7 +65,7 @@
                     @endforeach
                 </div>
                 <div id="container-details-of-apartment">
-                    <h4>{{$item['name_of_company']}}</h4>
+                    <h4 id="nameOfAdv" style="width: 18rem;">{{$item['name_of_company']}}</h4>
                     <p>{{$item['location']}}. {{$item['house_number']}}, {{$item['street_name']}}.</p>
                     <p>{{$item['area']}} Sq. M. |
                         @if ($item['service'] == 'Sell')

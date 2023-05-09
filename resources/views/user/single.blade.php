@@ -31,7 +31,6 @@
         </div>
         <div id="ownerDetails">
             <p style="margin-left:7vw ; font-weight:bold">Publisher Image</p>
-            {{-- {{dd($data['ownerImage'])}} --}}
             <img id="ownerImage" src="{{URL::asset('storage/image/'.$data['ownerImage'])}}"  alt="">
         </div>
     </div>

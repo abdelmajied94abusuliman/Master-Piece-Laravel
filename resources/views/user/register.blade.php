@@ -13,7 +13,7 @@
             <form method="POST" action="{{ route('register') }}" id="form-container">
                 @csrf
 
-                <div id="table-form">
+                <div class="table-form">
 
                     <div><label>First Name</label></div>
                     <div><input onchange="checkFirstName()" id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus ></div>
@@ -24,7 +24,7 @@
                 </div>
 
 
-                <div id="table-form">
+                <div class="table-form">
 
                     <div><label>E-mail</label></div>
                     <div><input onchange="checkEmail()" id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required ></div>
@@ -35,7 +35,7 @@
                 </div>
 
 
-                <div id="table-form">
+                <div class="table-form">
 
                     <div><label>Password</label></div>
                     <div><input onchange="checkPass()" id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" ></div>
@@ -44,7 +44,7 @@
                     <div id="password-warining" style="display: none; color:red; font-size: 12px; margin-bottom: 25px; margin-top:-15px">*Please use at least one Upper-Lower-Number and Special Char.</div>
                     <div id="password-accept" style="display: none; color:green; font-size: 12px; margin-bottom: 25px; margin-top:-15px">Password is okay.</div>
                 </div>
-                <div id="table-form">
+                <div class="table-form">
 
                     <td><label>Confirm Password</label></td>
                     <td><input onchange="checkConfirmation()" id="password_confirmation" class="block mt-1 w-full"  type="password" name="password_confirmation" required ></td>
@@ -53,7 +53,7 @@
                     <div id="confirm-warining" style="display: none; color:red; font-size: 12px; margin-bottom: 25px; margin-top:-15px">*Your Password doesn't matched.</div>
                     <div id="confirm-accept" style="display: none; color:green; font-size: 12px; margin-bottom: 25px; margin-top:-15px">Password is okay.</div>
                 </div>
-                <div id="table-form">
+                <div class="table-form">
 
                     <td><label>Mobile</label></td>
                     <td><input id="mobile" class="block mt-1 w-full"  type="number" name="mobile" required ></td>

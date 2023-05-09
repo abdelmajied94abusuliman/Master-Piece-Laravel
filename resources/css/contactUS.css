@@ -5,6 +5,19 @@ body {
     margin: 0%;
 }
 
+
+
+
+
+/*                  START IMG SECTION                           */
+/*                  START IMG SECTION                           */
+/*                  START IMG SECTION                           */
+/*                  START IMG SECTION                           */
+
+
+
+
+
 .contact_bg {
     height: 90vh;
     background: url('../../public/image/image\(5\).png');
@@ -23,6 +36,45 @@ body {
 
 .contact_bg h1 {
     font-size: 4.3rem;
+}
+
+
+
+
+/*                  END IMG SECTION                           */
+/*                  END IMG SECTION                           */
+/*                  END IMG SECTION                           */
+/*                  END IMG SECTION                           */
+
+
+
+/*                  START CONTACT INFO SECTION                           */
+/*                  START CONTACT INFO SECTION                           */
+/*                  START CONTACT INFO SECTION                           */
+/*                  START CONTACT INFO SECTION                           */
+
+
+
+
+.contact_body {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.contact_body h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #000080;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.contact_body .line {
+    justify-content: center;
 }
 
 .line div{
@@ -60,27 +112,6 @@ body {
     margin: 1.6rem 0;
 }
 
-.contact_body {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.contact_body h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 0.4rem 0;
-    letter-spacing: 4px;
-    font-weight: 600;
-    color: #000080;
-    margin: 30px 0;
-    text-align: center;
-}
-
-.contact_body .line {
-    justify-content: center;
-}
-
 .contact_info {
     margin: 2rem 0;
     text-align: center;
@@ -114,6 +145,24 @@ body {
 .contact_info text {
     padding-top: 0.4rem;
 }
+
+
+
+
+/*                  END CONTACT INFO SECTION                            */
+/*                  END CONTACT INFO SECTION                            */
+/*                  END CONTACT INFO SECTION                            */
+/*                  END CONTACT INFO SECTION                            */
+
+
+
+/*                  START CONTACT FORM SECTION                           */
+/*                  START CONTACT FORM SECTION                           */
+/*                  START CONTACT FORM SECTION                           */
+/*                  START CONTACT FORM SECTION                           */
+
+
+
 
 .contact_form {
     padding: 2rem 0;
@@ -173,10 +222,17 @@ body {
 
 
 
-/*                  SCROLL UP                           */
-/*                  SCROLL UP                           */
-/*                  SCROLL UP                           */
-/*                  SCROLL UP                           */
+/*                  END CONTACT FORM SECTION                            */
+/*                  END CONTACT FORM SECTION                            */
+/*                  END CONTACT FORM SECTION                            */
+/*                  END CONTACT FORM SECTION                            */
+
+
+
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
 
 
 
@@ -203,6 +259,25 @@ body {
 .up.show {
     right: 35px;
 }
+
+
+
+
+
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+
+
+
+/*                  START RESPONSIVE                           */
+/*                  START RESPONSIVE                           */
+/*                  START RESPONSIVE                           */
+/*                  START RESPONSIVE                           */
+
+
+
 
 
 

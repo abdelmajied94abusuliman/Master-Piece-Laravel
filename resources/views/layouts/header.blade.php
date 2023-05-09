@@ -17,7 +17,7 @@
                 <a class="header-links-to-pages" href="{{route('profile.edit')}}">Profile</a>
                 <a class="header-links-to-pages" href="{{route('logout')}}">Logout</a>
                 @if(auth()->user()->is_admin)
-                    <a class="header-links-to-pages" href="admin/index" style="color: gold">Dashboard</a>
+                    <a class="header-links-to-pages" href="/admin/index" style="color: gold">Dashboard</a>
                 @endif
             </div>
         @else

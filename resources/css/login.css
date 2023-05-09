@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
 
 section{
     background-color:  #F2F0EF;
@@ -16,6 +16,17 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0%;
 }
+
+
+
+
+/*                  START ADMIN LOGIN CONTAINER FORM                               */
+/*                  START ADMIN LOGIN CONTAINER FORM                               */
+/*                  START ADMIN LOGIN CONTAINER FORM                               */
+/*                  START ADMIN LOGIN CONTAINER FORM                               */
+
+
+
 
 .flex-login {
     display: flex;
@@ -34,6 +45,20 @@ body {
 
 
 
+/*                  END ADMIN LOGIN CONTAINER FORM                               */
+/*                  END ADMIN LOGIN CONTAINER FORM                               */
+/*                  END ADMIN LOGIN CONTAINER FORM                               */
+/*                  END ADMIN LOGIN CONTAINER FORM                               */
+
+
+
+/*                  START CONTAINER FORM                               */
+/*                  START CONTAINER FORM                               */
+/*                  START CONTAINER FORM                               */
+/*                  START CONTAINER FORM                               */
+
+
+
 section{
     padding-top: 100px;
 }
@@ -41,14 +66,6 @@ section{
 .container {
     background-color: white;
     height: 100%;
-}
-
-.container p,label {
-    color: #000080;
-}
-
-.container label {
-    font-weight: bold;
 }
 
 .container h2 {
@@ -60,6 +77,23 @@ section{
 
 }
 
+.container form{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 50px;
+    gap: 6px;
+}
+
+.container label {
+    font-weight: bold;
+}
+
+.container p,label {
+    color: #000080;
+}
+
 .container a {
    text-decoration: none;
 
@@ -68,15 +102,6 @@ section{
 .container a:hover {
    color: #c4c700;
 
-}
-
-.container form{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding-top: 50px;
-    gap: 6px;
 }
 
 .container form input[type=email],input[type=password] {
@@ -120,6 +145,26 @@ section{
     text-decoration: underline;
     color: #000080;
 }
+
+
+
+
+
+/*                  END CONTAINER FORM                           */
+/*                  END CONTAINER FORM                           */
+/*                  END CONTAINER FORM                           */
+/*                  END CONTAINER FORM                           */
+
+
+
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+
+
+
+
 
 
 

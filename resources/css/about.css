@@ -5,6 +5,19 @@ body {
     margin: 0%;
 }
 
+
+
+
+/*                  START IMG SECTION                           */
+/*                  START IMG SECTION                           */
+/*                  START IMG SECTION                           */
+/*                  START IMG SECTION                           */
+
+
+
+
+
+
 .contact_bg {
     height: 90vh;
     background: url('../../public/image/ayla.jpg');
@@ -51,6 +64,17 @@ section{
 
 
 
+
+
+
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+/*                  START SCROLL UP BUTTON                           */
+
+
+
+
 .up {
     position: fixed;
     bottom: 100px;
@@ -74,6 +98,26 @@ section{
  .up.show {
     right: 35px;
  }
+
+
+
+
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+/*                  END SCROLL UP BUTTON                           */
+
+
+
+/*                  START RESPONSIVE                           */
+/*                  START RESPONSIVE                           */
+/*                  START RESPONSIVE                           */
+/*                  START RESPONSIVE                           */
+
+
+
+
+
 
  @media screen and (max-width : 280px) {
     .contact_bg h1 {

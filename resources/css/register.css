@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
+}
 
 section{
     background-color:  #F2F0EF;
@@ -17,23 +17,26 @@ body {
     margin: 0%;
 }
 
-
 section{
     padding-top: 100px;
 
 }
 
+
+
+
+/*                  START MAIN AND FORM CONTAINER                               */
+/*                  START MAIN AND FORM CONTAINER                               */
+/*                  START MAIN AND FORM CONTAINER                               */
+/*                  START MAIN AND FORM CONTAINER                               */
+
+
+
+
+
 .container {
     background-color: white;
     height: 85vh;
-}
-
-.container p,label {
-    color: #000080;
-}
-
-.container label {
-    font-weight: bold;
 }
 
 .container h2 {
@@ -42,6 +45,33 @@ section{
     font-weight: 700;
     padding-left: 40px;
     padding-top: 30px;
+}
+
+.container form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 80px;
+    padding-left: 80px;
+    padding-right: 40px;
+}
+
+.table-form {
+    width: 90%;
+}
+
+.container label {
+    color: #000080;
+    font-weight: bold;
+}
+
+.container form input[type=text], input[type=number] ,input[type=email],input[type=password],[name=fname],input[name=lname],input[name=mobile] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
 }
 
 .container a {
@@ -54,27 +84,9 @@ section{
 
 }
 
-.container form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 80px;
-    padding-left: 80px;
-    padding-right: 40px;
-}
-
-#table-form {
-    width: 90%;
-}
-
-
-.container form input[type=text], input[type=number] ,input[type=email],input[type=password],[name=fname],input[name=lname],input[name=mobile] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
+#have-account {
+    padding-top: 30px;
+    text-align: center;
 }
 
 #button-register{
@@ -94,10 +106,6 @@ section{
     transform: scale(1.1);
 }
 
-#have-account {
-    padding-top: 30px;
-    text-align: center;
-}
 
 #go-with-link {
     color:rgb(197, 145, 0);
@@ -113,6 +121,27 @@ section{
     grid-column-end: 3;
     margin: auto;
 }
+
+
+
+
+
+
+/*                  END MAIN AND FORM CONTAINER                          */
+/*                  END MAIN AND FORM CONTAINER                          */
+/*                  END MAIN AND FORM CONTAINER                          */
+/*                  END MAIN AND FORM CONTAINER                          */
+
+
+
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+/*                  START RESPONSIVE                               */
+
+
+
+
 
 
 @media screen and (max-width : 1024px ) {
